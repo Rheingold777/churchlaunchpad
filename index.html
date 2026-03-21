@@ -8,7 +8,7 @@
   
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -76,7 +76,7 @@
     
     .hero h1 {
       font-size: 48px;
-      font-weight: 700;
+      font-weight: 800;
       line-height: 1.2;
       margin-bottom: 24px;
       max-width: 800px;
@@ -114,199 +114,221 @@
       font-size: 14px;
     }
     
-    /* Problem Section */
-    .problem {
+    /* Pain Points Section */
+    .pain-section {
       padding: 80px 0;
       background: var(--bg-alt);
     }
     
-    .problem h2 {
-      font-size: 36px;
+    .section-header {
       text-align: center;
       margin-bottom: 48px;
     }
     
-    .problem-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 32px;
-    }
-    
-    .problem-card {
-      background: white;
-      padding: 32px;
-      border-radius: 12px;
-      border: 1px solid var(--border);
-    }
-    
-    .problem-card h3 {
-      font-size: 20px;
+    .section-header h2 {
+      font-size: 36px;
+      font-weight: 700;
       margin-bottom: 12px;
     }
     
-    .problem-card p {
+    .section-header p {
       color: var(--text-light);
+      font-size: 18px;
     }
     
-    /* Services */
+    .pain-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 24px;
+    }
+    
+    .pain-card {
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 28px;
+    }
+    
+    .pain-card .icon {
+      font-size: 2rem;
+      margin-bottom: 16px;
+    }
+    
+    .pain-card h3 {
+      font-size: 18px;
+      font-weight: 600;
+      margin-bottom: 8px;
+    }
+    
+    .pain-card p {
+      color: var(--text-light);
+      font-size: 15px;
+    }
+    
+    /* Services Section */
     .services {
       padding: 80px 0;
     }
     
-    .services h2 {
-      font-size: 36px;
-      text-align: center;
-      margin-bottom: 16px;
-    }
-    
-    .services-intro {
-      text-align: center;
-      color: var(--text-light);
-      margin-bottom: 48px;
-      font-size: 18px;
-    }
-    
-    .pricing-grid {
+    .services-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
       gap: 24px;
     }
     
-    .pricing-card {
-      border: 2px solid var(--border);
+    .service-card {
+      border: 1px solid var(--border);
       border-radius: 12px;
       padding: 32px;
-      position: relative;
     }
     
-    .pricing-card.featured {
-      border-color: var(--primary);
-    }
-    
-    .pricing-badge {
-      position: absolute;
-      top: -12px;
-      left: 50%;
-      transform: translateX(-50%);
-      background: var(--primary);
-      color: white;
-      padding: 4px 16px;
-      border-radius: 20px;
-      font-size: 12px;
+    .service-card h3 {
+      font-size: 20px;
       font-weight: 600;
-      text-transform: uppercase;
+      margin-bottom: 16px;
     }
     
-    .pricing-card h3 {
-      font-size: 24px;
-      margin-bottom: 8px;
-    }
-    
-    .pricing-card .price {
-      font-size: 40px;
-      font-weight: 700;
-      margin-bottom: 8px;
-    }
-    
-    .pricing-card .price span {
-      font-size: 16px;
-      font-weight: 400;
-      color: var(--text-light);
-    }
-    
-    .pricing-card .setup {
-      color: var(--text-light);
-      font-size: 14px;
-      margin-bottom: 24px;
-    }
-    
-    .pricing-card ul {
+    .service-card ul {
       list-style: none;
-      margin-bottom: 32px;
     }
     
-    .pricing-card li {
+    .service-card li {
       padding: 8px 0;
-      border-bottom: 1px solid var(--border);
       display: flex;
       align-items: center;
-      gap: 8px;
+      gap: 10px;
+      color: var(--text-light);
     }
     
-    .pricing-card li:last-child {
-      border-bottom: none;
-    }
-    
-    .check {
+    .service-card li::before {
+      content: "✓";
       color: var(--primary);
       font-weight: bold;
     }
     
-    .pricing-cta {
-      display: block;
-      text-align: center;
-      padding: 14px;
-      border-radius: 8px;
-      text-decoration: none;
-      font-weight: 600;
-      transition: all 0.2s;
-    }
-    
-    .pricing-cta.primary {
-      background: var(--primary);
-      color: white;
-    }
-    
-    .pricing-cta.primary:hover {
-      background: var(--primary-dark);
-    }
-    
-    .pricing-cta.secondary {
-      border: 2px solid var(--primary);
-      color: var(--primary);
-    }
-    
-    .pricing-cta.secondary:hover {
-      background: var(--primary);
-      color: white;
-    }
-    
-    /* CTA Section */
-    .cta-section {
+    /* Testimonial */
+    .testimonial {
       padding: 80px 0;
-      background: var(--primary);
-      color: white;
+      background: var(--bg-alt);
+    }
+    
+    .testimonial-content {
+      max-width: 800px;
+      margin: 0 auto;
       text-align: center;
     }
     
-    .cta-section h2 {
-      font-size: 36px;
-      margin-bottom: 16px;
+    .testimonial blockquote {
+      font-size: 24px;
+      font-style: italic;
+      line-height: 1.6;
+      margin-bottom: 24px;
+      color: var(--text);
     }
     
-    .cta-section p {
-      font-size: 18px;
-      opacity: 0.9;
-      margin-bottom: 32px;
-      max-width: 500px;
-      margin-left: auto;
-      margin-right: auto;
+    .testimonial .author {
+      color: var(--text-light);
     }
     
-    .cta-button {
-      display: inline-block;
-      background: white;
+    .testimonial .author strong {
       color: var(--primary);
-      padding: 16px 32px;
-      border-radius: 8px;
-      text-decoration: none;
-      font-weight: 600;
-      font-size: 18px;
-      transition: transform 0.2s;
     }
     
-    .cta-button:hover {
-      transform: translateY(-2px);
+    /* Form Section */
+    .form-section {
+      padding: 80px 0;
+    }
+    
+    .form-container {
+      max-width: 600px;
+      margin: 0 auto;
+      background: var(--bg-alt);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 40px;
+    }
+    
+    .form-container h2 {
+      font-size: 28px;
+      text-align: center;
+      margin-bottom: 8px;
+    }
+    
+    .form-container > p {
+      text-align: center;
+      color: var(--text-light);
+      margin-bottom: 32px;
+    }
+    
+    .form-group {
+      margin-bottom: 20px;
+    }
+    
+    .form-group label {
+      display: block;
+      font-weight: 500;
+      margin-bottom: 8px;
+      font-size: 14px;
+    }
+    
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      width: 100%;
+      padding: 12px 14px;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      font-size: 16px;
+      font-family: inherit;
+      background: white;
+    }
+    
+    .form-group input:focus,
+    .form-group select:focus,
+    .form-group textarea:focus {
+      outline: none;
+      border-color: var(--primary);
+    }
+    
+    .form-group textarea {
+      min-height: 100px;
+      resize: vertical;
+    }
+    
+    .checkbox-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 12px;
+    }
+    
+    .checkbox-item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 14px;
+    }
+    
+    .checkbox-item input {
+      width: 18px;
+      height: 18px;
+    }
+    
+    .submit-btn {
+      width: 100%;
+      padding: 16px;
+      background: var(--primary);
+      color: white;
+      border: none;
+      border-radius: 8px;
+      font-size: 16px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background 0.2s;
+      margin-top: 16px;
+    }
+    
+    .submit-btn:hover {
+      background: var(--primary-dark);
     }
     
     /* Footer */
@@ -317,150 +339,9 @@
       border-top: 1px solid var(--border);
     }
     
-    /* Assessment Form */
-    .assessment-section {
-      padding: 80px 0;
-      background: var(--bg-alt);
-    }
-    
-    .assessment-section h2 {
-      font-size: 36px;
-      text-align: center;
-      margin-bottom: 16px;
-    }
-    
-    .assessment-intro {
-      text-align: center;
-      color: var(--text-light);
-      margin-bottom: 48px;
-      font-size: 18px;
-    }
-    
-    .assessment-form {
-      max-width: 600px;
-      margin: 0 auto;
-      background: white;
-      padding: 40px;
-      border-radius: 12px;
-      border: 1px solid var(--border);
-    }
-    
-    .form-step {
-      display: none;
-    }
-    
-    .form-step.active {
-      display: block;
-    }
-    
-    .form-step h3 {
-      font-size: 24px;
-      margin-bottom: 24px;
-      padding-bottom: 16px;
-      border-bottom: 1px solid var(--border);
-    }
-    
-    .form-group {
-      margin-bottom: 24px;
-    }
-    
-    .form-group label {
-      display: block;
-      font-weight: 500;
-      margin-bottom: 8px;
-    }
-    
-    .form-group input,
-    .form-group select,
-    .form-group textarea {
-      width: 100%;
-      padding: 12px;
-      border: 1px solid var(--border);
-      border-radius: 6px;
-      font-size: 16px;
-      font-family: inherit;
-    }
-    
-    .form-group input:focus,
-    .form-group select:focus,
-    .form-group textarea:focus {
-      outline: none;
-      border-color: var(--primary);
-    }
-    
-    .checkbox-group {
-      display: flex;
-      flex-direction: column;
-      gap: 12px;
-    }
-    
-    .checkbox {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      font-weight: 400;
-      cursor: pointer;
-    }
-    
-    .checkbox input {
-      width: auto;
-    }
-    
-    .form-buttons {
-      display: flex;
-      gap: 12px;
-      margin-top: 32px;
-    }
-    
-    .form-next,
-    .form-back,
-    .form-submit {
-      padding: 14px 28px;
-      border-radius: 8px;
-      font-size: 16px;
-      font-weight: 600;
-      cursor: pointer;
-      border: none;
-      transition: all 0.2s;
-    }
-    
-    .form-next,
-    .form-submit {
-      background: var(--primary);
-      color: white;
-      flex: 1;
-    }
-    
-    .form-next:hover,
-    .form-submit:hover {
-      background: var(--primary-dark);
-    }
-    
-    .form-back {
-      background: white;
-      color: var(--text);
-      border: 1px solid var(--border);
-    }
-    
-    .form-back:hover {
-      background: var(--bg-alt);
-    }
-    
-    .form-success {
-      text-align: center;
-      padding: 40px;
-    }
-    
-    .form-success h3 {
+    footer a {
       color: var(--primary);
-      border: none;
-    }
-    
-    .form-note {
-      text-align: center;
-      color: var(--text-light);
-      font-size: 14px;
-      margin-top: 16px;
+      text-decoration: none;
     }
     
     /* Mobile */
@@ -473,12 +354,20 @@
         font-size: 18px;
       }
       
-      .problem h2, .services h2, .assessment-section h2 {
+      .section-header h2 {
         font-size: 28px;
       }
       
-      .assessment-form {
+      .form-container {
         padding: 24px;
+      }
+      
+      .checkbox-grid {
+        grid-template-columns: 1fr;
+      }
+      
+      .testimonial blockquote {
+        font-size: 20px;
       }
     }
   </style>
@@ -488,167 +377,195 @@
   <nav>
     <div class="container">
       <a href="/" class="logo">ChurchLaunchpad</a>
-      <a href="#assessment" class="nav-cta">Free Assessment</a>
+      <a href="#get-started" class="nav-cta">Get Your Digital Assessment</a>
     </div>
   </nav>
 
   <section class="hero">
     <div class="container">
       <h1>Your Church Deserves a Digital Presence That Works</h1>
-      <p>Professional websites, automated social media, and digital strategy — so you can focus on ministry, not marketing.</p>
-      <a href="#assessment" class="hero-cta">Get Your Free Assessment</a>
+      <p>Website, Google Business, social media — all set up for your church. No tech skills needed. No agency prices.</p>
+      <a href="#get-started" class="hero-cta">Get Your Digital Assessment</a>
       <p class="hero-sub">5-minute assessment. No obligation. Real recommendations.</p>
     </div>
   </section>
 
-  <section class="problem">
+  <section class="pain-section">
     <div class="container">
-      <h2>Sound Familiar?</h2>
-      <div class="problem-grid">
-        <div class="problem-card">
-          <h3>Outdated Website</h3>
-          <p>Your website looks like it was built in 2015. Visitors leave before they find service times.</p>
+      <div class="section-header">
+        <h2>Sound Familiar?</h2>
+        <p>Most small churches face the same digital challenges.</p>
+      </div>
+      <div class="pain-grid">
+        <div class="pain-card">
+          <div class="icon">🔍</div>
+          <h3>"Nobody can find us on Google"</h3>
+          <p>New visitors search "church near me" and you don't show up. The big church down the road owns all the search results.</p>
         </div>
-        <div class="problem-card">
-          <h3>Social Media Struggle</h3>
-          <p>You know you should post more, but who has time? And what do you even post?</p>
+        <div class="pain-card">
+          <div class="icon">💸</div>
+          <h3>"We can't afford a web designer"</h3>
+          <p>Agencies want $3,000+ for a website. Your current solution costs $93/month and still looks outdated.</p>
         </div>
-        <div class="problem-card">
-          <h3>No Time for Tech</h3>
-          <p>Between sermons, visits, and counseling — learning digital marketing isn't happening.</p>
+        <div class="pain-card">
+          <div class="icon">📱</div>
+          <h3>"Social media dies after 2 weeks"</h3>
+          <p>You start strong, then life gets busy. Your last post was 6 months ago and it shows.</p>
+        </div>
+        <div class="pain-card">
+          <div class="icon">⏰</div>
+          <h3>"I'm too busy pastoring"</h3>
+          <p>You went to Bible college, not marketing school. Your calling is ministry, not managing pixels.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <section class="services" id="services">
+  <section class="services">
     <div class="container">
-      <h2>What We Do</h2>
-      <p class="services-intro">Everything your church needs to thrive online.</p>
-      
-      <div class="pricing-grid">
-        <div class="pricing-card">
-          <h3>Church Websites</h3>
+      <div class="section-header">
+        <h2>What We Do</h2>
+        <p>Everything your church needs to get found online.</p>
+      </div>
+      <div class="services-grid">
+        <div class="service-card">
+          <h3>🌐 Church Websites</h3>
           <ul>
-            <li><span class="check">✓</span> Modern, mobile-first design</li>
-            <li><span class="check">✓</span> Easy for visitors to find info</li>
-            <li><span class="check">✓</span> Built for search engines</li>
-            <li><span class="check">✓</span> Hosting and maintenance included</li>
+            <li>Modern, mobile-first design</li>
+            <li>Easy for visitors to find info</li>
+            <li>Built for search engines</li>
+            <li>Hosting included</li>
           </ul>
         </div>
-        
-        <div class="pricing-card">
-          <h3>Social Media</h3>
+        <div class="service-card">
+          <h3>📱 Social Media</h3>
           <ul>
-            <li><span class="check">✓</span> Automated posting schedule</li>
-            <li><span class="check">✓</span> Scripture and event graphics</li>
-            <li><span class="check">✓</span> Sermon clips and highlights</li>
-            <li><span class="check">✓</span> Engagement strategies that work</li>
+            <li>Automated posting schedule</li>
+            <li>Scripture and event graphics</li>
+            <li>Sermon clips and highlights</li>
+            <li>Consistent without the work</li>
           </ul>
         </div>
-        
-        <div class="pricing-card">
-          <h3>Digital Strategy</h3>
+        <div class="service-card">
+          <h3>📍 Google Business</h3>
           <ul>
-            <li><span class="check">✓</span> Content calendar planning</li>
-            <li><span class="check">✓</span> Email newsletter setup</li>
-            <li><span class="check">✓</span> Online giving optimization</li>
-            <li><span class="check">✓</span> Monthly strategy calls</li>
+            <li>Profile setup and optimization</li>
+            <li>Show up in "church near me" searches</li>
+            <li>Review generation strategies</li>
+            <li>Local SEO that works</li>
           </ul>
         </div>
       </div>
     </div>
   </section>
 
-  <section class="assessment-section" id="assessment">
+  <section class="testimonial">
     <div class="container">
-      <h2>Free Digital Assessment</h2>
-      <p class="assessment-intro">Answer a few questions and we'll create a personalized plan for your church.</p>
-      
-      <form class="assessment-form" id="assessmentForm">
-        <div class="form-step active" data-step="1">
-          <h3>Get Started</h3>
+      <div class="testimonial-content">
+        <blockquote>"We went from invisible on Google to showing up first for 'church Salado TX' in just 2 weeks. Our visitors now find us before the megachurch."</blockquote>
+        <p class="author">— <strong>Pastor Bob Brott</strong>, First Church Salado</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="form-section" id="get-started">
+    <div class="container">
+      <div class="form-container">
+        <h2>Let's Get You Visible</h2>
+        <p>Fill this out and we'll reach out within 24 hours.</p>
+        
+        <form action="https://formspree.io/f/xpwzqvpk" method="POST">
+          <input type="hidden" name="_subject" value="New ChurchLaunchpad Inquiry">
           
           <div class="form-group">
-            <label>Your Name *</label>
-            <input type="text" name="contactName" required placeholder="Pastor or contact person">
+            <label for="church_name">Church Name *</label>
+            <input type="text" id="church_name" name="church_name" required>
           </div>
           
           <div class="form-group">
-            <label>Email *</label>
-            <input type="email" name="email" required placeholder="your@email.com">
+            <label for="pastor_name">Pastor Name *</label>
+            <input type="text" id="pastor_name" name="pastor_name" required>
           </div>
           
           <div class="form-group">
-            <label>Church Name *</label>
-            <input type="text" name="churchName" required placeholder="e.g., First Baptist Church">
+            <label for="email">Email *</label>
+            <input type="email" id="email" name="email" required>
           </div>
           
           <div class="form-group">
-            <label>What's your biggest challenge right now?</label>
-            <select name="biggestChallenge">
-              <option value="">Select one...</option>
-              <option value="website">Need a better website</option>
-              <option value="social">Social media is overwhelming</option>
-              <option value="time">No time to manage digital</option>
-              <option value="reach">Want to reach more people</option>
-              <option value="not-sure">Not sure where to start</option>
+            <label for="phone">Phone</label>
+            <input type="tel" id="phone" name="phone">
+          </div>
+          
+          <div class="form-group">
+            <label for="location">City & State *</label>
+            <input type="text" id="location" name="location" placeholder="e.g. Salado, TX" required>
+          </div>
+          
+          <div class="form-group">
+            <label for="website">Current Website (if any)</label>
+            <input type="url" id="website" name="website" placeholder="https://...">
+          </div>
+          
+          <div class="form-group">
+            <label for="members">Approximate Attendance</label>
+            <select id="members" name="members">
+              <option value="">Select...</option>
+              <option value="1-25">1-25</option>
+              <option value="26-50">26-50</option>
+              <option value="51-100">51-100</option>
+              <option value="101-250">101-250</option>
+              <option value="250+">250+</option>
             </select>
           </div>
           
-          <button type="submit" class="form-submit">Get My Free Assessment</button>
-          <p class="form-note">We'll send you a detailed assessment within 24 hours.</p>
-        </div>
-        
-        <!-- Success Message -->
-        <div class="form-success" style="display: none;">
-          <h3>You're In!</h3>
-          <p>Check your email — we're sending your personalized assessment with detailed questions to help us understand your church's needs.</p>
-        </div>
-      </form>
+          <div class="form-group">
+            <label>What do you need help with?</label>
+            <div class="checkbox-grid">
+              <label class="checkbox-item">
+                <input type="checkbox" name="services" value="website">
+                New website
+              </label>
+              <label class="checkbox-item">
+                <input type="checkbox" name="services" value="google">
+                Google Business
+              </label>
+              <label class="checkbox-item">
+                <input type="checkbox" name="services" value="social">
+                Social media
+              </label>
+              <label class="checkbox-item">
+                <input type="checkbox" name="services" value="sermons">
+                Sermon clips
+              </label>
+              <label class="checkbox-item">
+                <input type="checkbox" name="services" value="seo">
+                Local SEO
+              </label>
+              <label class="checkbox-item">
+                <input type="checkbox" name="services" value="unsure">
+                Not sure yet
+              </label>
+            </div>
+          </div>
+          
+          <div class="form-group">
+            <label for="message">Anything else we should know?</label>
+            <textarea id="message" name="message" placeholder="Tell us about your church, your biggest challenge, or what you're hoping to accomplish..."></textarea>
+          </div>
+          
+          <button type="submit" class="submit-btn">Get My Digital Assessment →</button>
+        </form>
+      </div>
     </div>
   </section>
 
   <footer>
     <div class="container">
-      <p>&copy; 2026 ChurchLaunchpad. A Suppan Ventures company.</p>
+      <p>ChurchLaunchpad — Built for churches by people who understand ministry.</p>
+      <p style="margin-top: 8px;">Questions? <a href="mailto:hello@churchlaunchpad.org">hello@churchlaunchpad.org</a></p>
     </div>
   </footer>
-
-  <script>
-    const form = document.getElementById('assessmentForm');
-    
-    form.addEventListener('submit', async (e) => {
-      e.preventDefault();
-      
-      const btn = form.querySelector('.form-submit');
-      btn.textContent = 'Submitting...';
-      btn.disabled = true;
-      
-      const formData = new FormData(form);
-      const data = {
-        contactName: formData.get('contactName'),
-        churchName: formData.get('churchName'),
-        email: formData.get('email'),
-        biggestChallenge: formData.get('biggestChallenge')
-      };
-      
-      // Send to backend function
-      try {
-        await fetch('/submit', {
-          method: 'POST',
-          body: JSON.stringify(data),
-          headers: { 'Content-Type': 'application/json' }
-        });
-      } catch (err) {
-        console.log('Submission recorded');
-      }
-      
-      // Show success
-      form.querySelector('.form-step').style.display = 'none';
-      form.querySelector('.form-success').style.display = 'block';
-    });
-  </script>
 
 </body>
 </html>
