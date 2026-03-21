@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Free Resources | ChurchLaunchpad</title>
+  <meta name="description" content="Free guides and tips to help your church get found online. No fluff, just what works.">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    
+    :root {
+      --primary: #2563eb;
+      --primary-dark: #1d4ed8;
+      --text: #1f2937;
+      --text-light: #6b7280;
+      --bg: #ffffff;
+      --bg-alt: #f9fafb;
+      --border: #e5e7eb;
+    }
+    
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      color: var(--text);
+      line-height: 1.6;
+    }
+    
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+    
+    nav {
+      padding: 20px 0;
+      border-bottom: 1px solid var(--border);
+    }
+    
+    nav .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    
+    .logo {
+      font-size: 24px;
+      font-weight: 700;
+      color: var(--primary);
+      text-decoration: none;
+    }
+    
+    .nav-links {
+      display: flex;
+      gap: 32px;
+      align-items: center;
+    }
+    
+    .nav-links a {
+      color: var(--text-light);
+      text-decoration: none;
+      font-weight: 500;
+    }
+    
+    .nav-links a:hover {
+      color: var(--text);
+    }
+    
+    .nav-cta {
+      background: var(--primary);
+      color: white !important;
+      padding: 10px 20px;
+      border-radius: 6px;
+    }
+    
+    .nav-cta:hover {
+      background: var(--primary-dark);
+    }
+    
+    .hero {
+      padding: 80px 0 60px;
+      text-align: center;
+    }
+    
+    .hero h1 {
+      font-size: 42px;
+      font-weight: 800;
+      margin-bottom: 16px;
+    }
+    
+    .hero p {
+      font-size: 20px;
+      color: var(--text-light);
+      max-width: 600px;
+      margin: 0 auto;
+    }
+    
+    .posts {
+      padding: 40px 0 80px;
+    }
+    
+    .posts-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 32px;
+    }
+    
+    .post-card {
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      overflow: hidden;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    
+    .post-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 24px rgba(0,0,0,0.1);
+    }
+    
+    .post-image {
+      height: 180px;
+      background: var(--bg-alt);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 48px;
+    }
+    
+    .post-content {
+      padding: 24px;
+    }
+    
+    .post-tag {
+      display: inline-block;
+      background: rgba(37, 99, 235, 0.1);
+      color: var(--primary);
+      padding: 4px 10px;
+      border-radius: 4px;
+      font-size: 12px;
+      font-weight: 600;
+      text-transform: uppercase;
+      margin-bottom: 12px;
+    }
+    
+    .post-card h2 {
+      font-size: 20px;
+      font-weight: 700;
+      margin-bottom: 12px;
+      line-height: 1.3;
+    }
+    
+    .post-card h2 a {
+      color: var(--text);
+      text-decoration: none;
+    }
+    
+    .post-card h2 a:hover {
+      color: var(--primary);
+    }
+    
+    .post-card p {
+      color: var(--text-light);
+      font-size: 15px;
+      margin-bottom: 16px;
+    }
+    
+    .read-more {
+      color: var(--primary);
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 14px;
+    }
+    
+    .read-more:hover {
+      text-decoration: underline;
+    }
+    
+    footer {
+      padding: 40px 0;
+      text-align: center;
+      color: var(--text-light);
+      border-top: 1px solid var(--border);
+    }
+    
+    footer a {
+      color: var(--primary);
+      text-decoration: none;
+    }
+    
+    @media (max-width: 768px) {
+      .hero h1 { font-size: 32px; }
+      .nav-links { gap: 16px; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <div class="container">
+      <a href="/" class="logo">ChurchLaunchpad</a>
+      <div class="nav-links">
+        <a href="/">Home</a>
+        <a href="/blog.html">Resources</a>
+        <a href="/#get-started" class="nav-cta">Get Your Assessment</a>
+      </div>
+    </div>
+  </nav>
+
+  <section class="hero">
+    <div class="container">
+      <h1>Free Resources for Churches</h1>
+      <p>Practical guides to help your church get found online. No fluff. Just what works.</p>
+    </div>
+  </section>
+
+  <section class="posts">
+    <div class="container">
+      <div class="posts-grid">
+        
+        <article class="post-card">
+          <div class="post-image">🔍</div>
+          <div class="post-content">
+            <span class="post-tag">Google</span>
+            <h2><a href="/posts/google-business-profile.html">Why Your Church Doesn't Show Up on Google (And How to Fix It)</a></h2>
+            <p>90% of people search "church near me" before visiting. If you're not in those results, you're invisible to newcomers.</p>
+            <a href="/posts/google-business-profile.html" class="read-more">Read More →</a>
+          </div>
+        </article>
+        
+        <article class="post-card">
+          <div class="post-image">📱</div>
+          <div class="post-content">
+            <span class="post-tag">Social Media</span>
+            <h2><a href="/posts/social-media-dying.html">Your Church Social Media Isn't Failing — You're Just Measuring Wrong</a></h2>
+            <p>That post you thought flopped? It might be exactly what someone needed. Here's what actually matters.</p>
+            <a href="/posts/social-media-dying.html" class="read-more">Read More →</a>
+          </div>
+        </article>
+        
+        <article class="post-card">
+          <div class="post-image">⭐</div>
+          <div class="post-content">
+            <span class="post-tag">Reviews</span>
+            <h2><a href="/posts/google-reviews.html">How to Get 10 Google Reviews This Month (Without Being Weird)</a></h2>
+            <p>Churches with 10+ reviews rank higher and build trust instantly. Here's the exact script to ask your members.</p>
+            <a href="/posts/google-reviews.html" class="read-more">Read More →</a>
+          </div>
+        </article>
+        
+        <article class="post-card">
+          <div class="post-image">🌐</div>
+          <div class="post-content">
+            <span class="post-tag">Website</span>
+            <h2><a href="/posts/church-website-mistakes.html">5 Church Website Mistakes That Drive Visitors Away</a></h2>
+            <p>Your website has 3 seconds to answer one question. Most church sites fail this test completely.</p>
+            <a href="/posts/church-website-mistakes.html" class="read-more">Read More →</a>
+          </div>
+        </article>
+        
+        <article class="post-card">
+          <div class="post-image">📋</div>
+          <div class="post-content">
+            <span class="post-tag">Strategy</span>
+            <h2><a href="/posts/digital-presence-checklist.html">The Complete Church Digital Presence Checklist</a></h2>
+            <p>Everything your church needs to be found online — in one simple checklist you can complete this week.</p>
+            <a href="/posts/digital-presence-checklist.html" class="read-more">Read More →</a>
+          </div>
+        </article>
+        
+        <article class="post-card">
+          <div class="post-image">🎬</div>
+          <div class="post-content">
+            <span class="post-tag">Content</span>
+            <h2><a href="/posts/sermon-clips.html">How to Turn Every Sermon Into a Week of Content</a></h2>
+            <p>One Sunday sermon can fuel your entire social media week. Here's the simple system we use.</p>
+            <a href="/posts/sermon-clips.html" class="read-more">Read More →</a>
+          </div>
+        </article>
+        
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <p>ChurchLaunchpad — Built for churches by people who understand ministry.</p>
+      <p style="margin-top: 8px;">Questions? <a href="mailto:hello@churchlaunchpad.org">hello@churchlaunchpad.org</a></p>
+    </div>
+  </footer>
+
+</body>
+</html>
