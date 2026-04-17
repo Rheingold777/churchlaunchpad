@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SermonSync: One Sermon, a Week of Content | ChurchLaunchpad</title>
+  <meta name="description" content="Stop creating content from scratch. Your Sunday sermon is a goldmine. SermonSync uses AI to turn one message into clips, quotes, and social posts that last all week.">
+  <!-- Canonical -->
+  <link rel="canonical" href="https://churchlaunchpad.org/posts/sermonsync.html">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://churchlaunchpad.org/posts/sermonsync.html">
+  <meta property="og:title" content="SermonSync: One Sermon, a Week of Content | ChurchLaunchpad">
+  <meta property="og:description" content="Stop creating content from scratch. Your Sunday sermon is a goldmine. SermonSync uses AI to turn one message into clips, quotes, and social posts that last all week.">
+  <meta property="og:image" content="https://churchlaunchpad.org/images/og-image.svg">
+  <meta property="og:site_name" content="ChurchLaunchpad">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="SermonSync: One Sermon, a Week of Content | ChurchLaunchpad">
+  <meta name="twitter:description" content="Stop creating content from scratch. Your Sunday sermon is a goldmine. SermonSync uses AI to turn one message into clips, quotes, and social posts that last all week.">
+  <meta name="twitter:image" content="https://churchlaunchpad.org/images/og-image.svg">
+
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,800;1,700&family=Lora:wght@400;500;600&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+  
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    
+    :root {
+      --primary: #2563eb;
+      --purple: #8b5cf6;
+      --text: #1f2937;
+      --text-light: #6b7280;
+      --bg: #faf8f5;
+      --bg-white: #ffffff;
+      --border: #e5e7eb;
+    }
+    
+    body {
+      font-family: 'JetBrains Mono', monospace;
+      color: var(--text);
+      line-height: 1.8;
+      background: var(--bg);
+    }
+    
+    .container { max-width: 760px; margin: 0 auto; padding: 0 24px; }
+    
+    /* Top bar */
+    .top-bar { 
+      height: 4px; 
+      background: linear-gradient(90deg, #64748b 0%, #64748b 33%, var(--primary) 33%, var(--primary) 66%, #cbd5e1 66%, #cbd5e1 100%);
+    }
+    
+    /* Nav */
+    nav { 
+      padding: 20px 0; 
+      border-bottom: 2px solid #94a3b8; 
+      background: var(--bg);
+    }
+    nav .container { 
+      max-width: 1320px;
+      display: flex; 
+      justify-content: space-between; 
+      align-items: center; 
+    }
+    .logo { 
+      font-family: 'Playfair Display', serif;
+      font-size: 22px; 
+      font-weight: 700; 
+      color: var(--text); 
+      text-decoration: none;
+      border-bottom: 2px solid var(--primary);
+      padding-bottom: 2px;
+    }
+    .nav-links { display: flex; align-items: center; gap: 36px; }
+    .nav-link { 
+      font-family: 'Playfair Display', serif;
+      color: var(--text); 
+      text-decoration: none; 
+      font-weight: 700;
+      font-size: 22px;
+    }
+    
+    /* Article */
+    article {
+      padding: 60px 0 80px;
+    }
+    
+    .post-tag {
+      display: inline-block;
+      background: var(--purple);
+      color: white;
+      padding: 6px 14px;
+      border-radius: 4px;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 12px;
+      font-weight: 400;
+      text-transform: uppercase;
+      margin-bottom: 20px;
+    }
+    
+    h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 42px;
+      font-weight: 800;
+      line-height: 1.2;
+      margin-bottom: 24px;
+    }
+    
+    .subtitle {
+      font-size: 20px;
+      color: var(--text-light);
+      margin-bottom: 40px;
+      font-style: italic;
+    }
+    
+    .featured-image {
+      width: 100%;
+      height: 400px;
+      object-fit: cover;
+      border-radius: 12px;
+      margin-bottom: 40px;
+    }
+    
+    h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 28px;
+      font-weight: 700;
+      margin: 48px 0 20px;
+    }
+    
+    h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 22px;
+      font-weight: 700;
+      margin: 32px 0 16px;
+    }
+    
+    p {
+      margin-bottom: 20px;
+      font-size: 18px;
+    }
+    
+    ul, ol {
+      margin: 20px 0 20px 24px;
+    }
+    
+    li {
+      margin-bottom: 12px;
+      font-size: 18px;
+    }
+    
+    blockquote {
+      border-left: 4px solid var(--purple);
+      padding-left: 24px;
+      margin: 32px 0;
+      font-style: italic;
+      color: var(--text-light);
+    }
+    
+    .highlight-box {
+      background: var(--purple);
+      color: white;
+      padding: 32px;
+      border-radius: 12px;
+      margin: 40px 0;
+    }
+    
+    .highlight-box h3 {
+      color: white;
+      margin-top: 0;
+    }
+    
+    .highlight-box p {
+      color: rgba(255,255,255,0.9);
+      margin-bottom: 0;
+    }
+    
+    .cta-box {
+      background: var(--bg-white);
+      border: 2px solid var(--purple);
+      padding: 40px;
+      border-radius: 12px;
+      margin: 48px 0;
+      text-align: center;
+    }
+    
+    .cta-box h3 {
+      margin-top: 0;
+      color: var(--purple);
+    }
+    
+    .cta-button {
+      display: inline-block;
+      background: var(--purple);
+      color: white;
+      padding: 14px 32px;
+      border-radius: 6px;
+      text-decoration: none;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 14px;
+      font-weight: 600;
+      margin-top: 16px;
+    }
+    
+    .cta-button:hover {
+      background: #7c3aed;
+    }
+    
+    /* Footer */
+    footer { 
+      padding: 80px 0 40px;
+      background: #f1f5f9;
+      border-top: 2px solid #94a3b8;
+    }
+    footer .container { max-width: 1320px; }
+    .footer-content {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1fr;
+      gap: 60px;
+      margin-bottom: 60px;
+    }
+    .footer-brand .logo {
+      font-family: 'Playfair Display', serif;
+      font-size: 24px;
+      font-weight: 700;
+      color: var(--text);
+      text-decoration: none;
+      display: block;
+      margin-bottom: 8px;
+      border-bottom: none;
+    }
+    .footer-brand .tagline {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 12px;
+      color: var(--text-light);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+    .footer-col h4 {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--text);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 20px;
+    }
+    .footer-col ul { list-style: none; }
+    .footer-col li { margin-bottom: 12px; }
+    .footer-col a {
+      font-family: 'Lora', serif;
+      font-size: 15px;
+      color: var(--text);
+      text-decoration: underline;
+      text-underline-offset: 3px;
+      text-decoration-color: var(--border);
+    }
+    .footer-col a:hover { text-decoration-color: var(--primary); }
+    .footer-bottom {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-top: 24px;
+      border-top: 1px solid var(--border);
+    }
+    .footer-bottom p {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 12px;
+      color: var(--text-light);
+      margin: 0;
+    }
+    
+    .bottom-bar { 
+      height: 4px; 
+      background: linear-gradient(90deg, #64748b 0%, #64748b 33%, var(--primary) 33%, var(--primary) 66%, #cbd5e1 66%, #cbd5e1 100%);
+    }
+    
+    @media (max-width: 768px) {
+      h1 { font-family: 'Playfair Display', serif; font-size: 32px; }
+      h2 { font-family: 'Playfair Display', serif; font-size: 24px; }
+      .featured-image { height: 250px; }
+      .footer-content { grid-template-columns: 1fr 1fr; gap: 40px; }
+      .footer-brand { grid-column: span 2; }
+      .footer-bottom { flex-direction: column; gap: 16px; text-align: center; }
+    }
+    
+    @media (max-width: 480px) {
+      .footer-content { grid-template-columns: 1fr; }
+      .footer-brand { grid-column: span 1; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="top-bar"></div>
+
+  <nav>
+    <div class="container">
+      <a href="/" class="logo">church launchpad</a>
+      <div class="nav-links">
+        <a href="/blog" class="nav-link">Resources</a>
+        <a href="/#get-started" class="nav-link">Get Started</a>
+      </div>
+    </div>
+  </nav>
+
+  <article>
+    <div class="container">
+      <span class="post-tag">SermonSync</span>
+      <h1>Turn One Sermon Into a Week of Content (Without Lifting a Finger)</h1>
+      <p class="subtitle">Your Sunday message is a goldmine. Here's how to mine it.</p>
+      
+      <img src="https://images.unsplash.com/photo-1478737270239-2f02b77fc618?w=1200&q=80" alt="Microphone recording" class="featured-image">
+      
+      <p>Every Sunday, you pour hours into crafting a message. You pray over it. Study for it. Lose sleep over it. Then you deliver it to your congregation...</p>
+      
+      <p>And by Monday, it's gone. Lost to the ether. Maybe someone recorded it on their phone. Maybe it's sitting on a hard drive somewhere.</p>
+      
+      <p><strong>Meanwhile, you're staring at a blank social media page wondering what to post this week.</strong></p>
+      
+      <p>Sound familiar?</p>
+      
+      <h2>The Content Problem Every Pastor Faces</h2>
+      
+      <p>Here's the brutal truth: creating consistent social media content is a full-time job. The megachurch down the street? They have someone whose <em>entire role</em> is creating content.</p>
+      
+      <p>You have:</p>
+      <ul>
+        <li>Sermons to write</li>
+        <li>Hospital visits to make</li>
+        <li>Counseling sessions</li>
+        <li>A family that would like to see you occasionally</li>
+      </ul>
+      
+      <p>Content creation falls to the bottom of the list. And it stays there.</p>
+      
+      <h2>What If Your Sermon Could Do the Heavy Lifting?</h2>
+      
+      <p>Think about it: every Sunday sermon contains:</p>
+      
+      <ul>
+        <li><strong>3-5 quotable moments</strong> — perfect for graphics</li>
+        <li><strong>Multiple stories and illustrations</strong> — great for short-form video</li>
+        <li><strong>Key scripture references</strong> — sharable with context</li>
+        <li><strong>A central theme</strong> — the foundation for blog posts, devotionals, and more</li>
+      </ul>
+      
+      <p>You're already creating incredible content. You're just not repurposing it.</p>
+      
+      <div class="highlight-box">
+        <h3>Enter SermonSync</h3>
+        <p>SermonSync is AI that actually understands ministry. Upload your sermon. Get a week of content. It's that simple.</p>
+      </div>
+      
+      <h2>How It Works</h2>
+      
+      <h3>1. Upload Your Sermon</h3>
+      <p>Audio, video, or even your notes. SermonSync transcribes and analyzes the entire message.</p>
+      
+      <h3>2. AI Extracts the Gold</h3>
+      <p>The system identifies quotable moments, key points, scripture references, and emotional peaks. It understands sermon structure — intro, points, illustrations, altar call.</p>
+      
+      <h3>3. Get Ready-to-Post Content</h3>
+      <p>Within minutes, you have:</p>
+      <ul>
+        <li>5-7 social media graphics with key quotes</li>
+        <li>Short video clips (30-60 seconds) of the best moments</li>
+        <li>Suggested captions for each platform</li>
+        <li>A weekly posting schedule</li>
+        <li>Optional: blog post draft expanding on the sermon theme</li>
+      </ul>
+      
+      <h3>4. Review and Post</h3>
+      <p>You approve everything before it goes live. Your voice, your message — just amplified.</p>
+      
+      <h2>One Sermon → 7 Days of Content</h2>
+      
+      <p>Here's what a typical week looks like with SermonSync:</p>
+      
+      <ul>
+        <li><strong>Monday:</strong> Scripture graphic from Sunday's main text</li>
+        <li><strong>Tuesday:</strong> Quote graphic from the sermon</li>
+        <li><strong>Wednesday:</strong> 45-second video clip — powerful moment</li>
+        <li><strong>Thursday:</strong> Story or illustration as a caption-only post</li>
+        <li><strong>Friday:</strong> Another quote graphic</li>
+        <li><strong>Saturday:</strong> Sermon teaser for Sunday</li>
+        <li><strong>Sunday:</strong> Full sermon link + invite</li>
+      </ul>
+      
+      <p>That's a full content calendar from work you already did on Sunday.</p>
+      
+      <blockquote>
+        "I used to spend 4 hours a week on social media. Now I spend 20 minutes reviewing what SermonSync creates. Same results, fraction of the time."
+        <br><br>— Pastor David, Living Word Church
+      </blockquote>
+      
+      <h2>But Will It Sound Like Me?</h2>
+      
+      <p>This is the question everyone asks. And it's the right question.</p>
+      
+      <p>SermonSync doesn't put words in your mouth. It extracts <em>your actual words</em> from <em>your actual sermon</em>. Every quote is something you said. Every clip is you preaching.</p>
+      
+      <p>The AI handles the tedious work — transcription, finding the best moments, formatting for different platforms. The voice is 100% yours.</p>
+      
+      <h2>Built for Churches, Not Corporations</h2>
+      
+      <p>Most AI content tools are built for marketers selling products. They don't understand ministry context.</p>
+      
+      <p>SermonSync was built by a pastor (that's me — Bernhard) specifically for church use. It understands:</p>
+      
+      <ul>
+        <li>Sermon structure and flow</li>
+        <li>Scripture references and formatting</li>
+        <li>What makes a moment shareable vs. just informational</li>
+        <li>Church-appropriate tone and sensitivity</li>
+      </ul>
+      
+      <div class="cta-box">
+        <h3>Ready to Stop Creating Content From Scratch?</h3>
+        <p>Let your Sunday sermon do the work. Get SermonSync as part of our Social Media package.</p>
+        <a href="/#get-started" class="cta-button">Get Started →</a>
+      </div>
+      
+      <h2>FAQ</h2>
+      
+      <h3>What format does my sermon need to be in?</h3>
+      <p>Audio (MP3, WAV), video (MP4, MOV), or even your sermon notes/manuscript. We work with whatever you have.</p>
+      
+      <h3>How long does it take?</h3>
+      <p>Processing takes about 10-15 minutes for a 30-minute sermon. You'll have your content ready within an hour of uploading.</p>
+      
+      <h3>Can I edit the content before it posts?</h3>
+      <p>Absolutely. You review and approve everything. Nothing goes live without your sign-off.</p>
+      
+      <h3>What if I don't like a clip or quote it selected?</h3>
+      <p>Skip it, replace it, or request alternatives. You're always in control.</p>
+      
+      <h3>Does it work for any preaching style?</h3>
+      <p>Yes — whether you're expository, topical, narrative, or somewhere in between. The AI adapts to your style.</p>
+      
+    </div>
+  </article>
+
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-brand">
+          <a href="/" class="logo">church launchpad</a>
+          <span class="tagline">With Bernhard Suppan</span>
+        </div>
+        <div class="footer-col">
+          <h4>Services</h4>
+          <ul>
+            <li><a href="/#get-started">Church Websites</a></li>
+            <li><a href="/#get-started">Social Media</a></li>
+            <li><a href="/#get-started">Google Business</a></li>
+            <li><a href="/posts/sermonsync.html">SermonSync</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Resources</h4>
+          <ul>
+            <li><a href="/blog">Blog</a></li>
+            <li><a href="/#get-started">Free Assessment</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Connect</h4>
+          <ul>
+            <li><a href="/cdn-cgi/l/email-protection#7e161b1212113e1d160b0c1d16121f0b101d160e1f1a50110c19">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2025-2026 ChurchLaunchpad — All rights reserved</p>
+      </div>
+    </div>
+  </footer>
+
+  <div class="bottom-bar"></div>
+
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js" defer></script></body>
+</html>

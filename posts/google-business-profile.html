@@ -5,9 +5,26 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Why Your Church Doesn't Show Up on Google | ChurchLaunchpad</title>
   <meta name="description" content="90% of people search 'church near me' before visiting. Here's how to make sure they find you.">
+  <!-- Canonical -->
+  <link rel="canonical" href="https://churchlaunchpad.org/posts/google-business-profile.html">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://churchlaunchpad.org/posts/google-business-profile.html">
+  <meta property="og:title" content="Why Your Church Doesn't Show Up on Google | ChurchLaunchpad">
+  <meta property="og:description" content="90% of people search 'church near me' before visiting. Here's how to make sure they find you.">
+  <meta property="og:image" content="https://churchlaunchpad.org/images/og-image.svg">
+  <meta property="og:site_name" content="ChurchLaunchpad">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Why Your Church Doesn't Show Up on Google | ChurchLaunchpad">
+  <meta name="twitter:description" content="90% of people search 'church near me' before visiting. Here's how to make sure they find you.">
+  <meta name="twitter:image" content="https://churchlaunchpad.org/images/og-image.svg">
+
   
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&family=Playfair+Display:ital,wght@0,400;0,700;0,800;0,900;1,400;1,700;1,800;1,900&display=swap" rel="stylesheet">
   
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -23,7 +40,7 @@
     }
     
     body {
-      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      font-family: 'JetBrains Mono', monospace, BlinkMacSystemFont, sans-serif;
       color: var(--text);
       line-height: 1.8;
     }
@@ -49,46 +66,85 @@
     }
     
     .logo {
-      font-size: 24px;
+      font-family: 'Playfair Display', serif;
+      font-size: 22px;
+      font-weight: 900;
+      font-style: italic;
+      color: var(--text);
+      text-decoration: none;
+      padding-bottom: 6px;
+      position: relative;
+      display: inline-block;
+    }
+    .logo::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: -8px;
+      width: 100%;
+      height: 4px;
+      background: linear-gradient(90deg, #64748b 33%, var(--primary) 33%, var(--primary) 66%, #cbd5e1 66%);
+    }
+    
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+    }
+    
+    .nav-link {
+      font-family: 'Playfair Display', serif;
+      font-size: 16px;
       font-weight: 700;
-      color: var(--primary);
+      color: var(--text);
       text-decoration: none;
     }
     
-    .nav-cta {
-      background: var(--primary);
-      color: white;
-      padding: 10px 20px;
-      border-radius: 6px;
-      text-decoration: none;
-      font-weight: 500;
+    .nav-link:hover {
+      color: var(--primary);
     }
     
     article {
       padding: 60px 0 80px;
     }
     
-    .post-meta {
-      color: var(--text-light);
-      font-size: 14px;
-      margin-bottom: 16px;
+    .post-tag { 
+      display: inline-block; 
+      background: rgba(37, 99, 235, 0.1); 
+      color: var(--primary); 
+      padding: 6px 14px; 
+      border-radius: 4px; 
+      font-family: 'JetBrains Mono', monospace; 
+      font-size: 12px; 
+      text-transform: uppercase; 
+      margin-bottom: 20px; 
     }
     
     h1 {
+      font-family: 'Playfair Display', serif;
       font-size: 36px;
       font-weight: 800;
       line-height: 1.2;
       margin-bottom: 24px;
     }
     
-    .lead {
+    .subtitle {
       font-size: 20px;
       color: var(--text-light);
       margin-bottom: 40px;
-      line-height: 1.6;
+      font-style: italic;
+    }
+    
+    .featured-image {
+      width: 100%;
+      height: 400px;
+      object-fit: cover;
+      border-radius: 12px;
+      margin-bottom: 40px;
     }
     
     h2 {
+      font-family: 'Playfair Display', serif;
       font-size: 24px;
       font-weight: 700;
       margin: 40px 0 16px;
@@ -169,40 +225,43 @@
       font-weight: 600;
     }
     
-    footer {
-      padding: 40px 0;
-      text-align: center;
-      color: var(--text-light);
-      border-top: 1px solid var(--border);
-    }
-    
-    footer a {
-      color: var(--primary);
-      text-decoration: none;
-    }
-    
-    @media (max-width: 768px) {
-      h1 { font-size: 28px; }
-      .lead { font-size: 18px; }
-    }
+    footer { padding: 80px 0 40px; background: #f1f5f9; border-top: 2px solid #94a3b8; }
+    footer .container { max-width: 1320px; }
+    .footer-content { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 60px; margin-bottom: 60px; }
+    .footer-brand .logo { font-family: 'Playfair Display', serif; font-size: 22px; font-weight: 900; font-style: italic; color: var(--text); text-decoration: none; display: block; margin-bottom: 8px; }
+    .footer-brand .tagline { font-family: 'JetBrains Mono', monospace; font-size: 12px; color: var(--text-light); text-transform: uppercase; letter-spacing: 1px; }
+    .footer-col h4 { font-family: 'JetBrains Mono', monospace; font-size: 12px; font-weight: 600; color: var(--text); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 20px; }
+    .footer-col ul { list-style: none; }
+    .footer-col li { margin-bottom: 12px; }
+    .footer-col a { font-size: 15px; color: var(--text); text-decoration: underline; text-underline-offset: 3px; text-decoration-color: var(--border); }
+    .footer-bottom { display: flex; justify-content: space-between; align-items: center; padding-top: 24px; border-top: 1px solid var(--border); }
+    .footer-bottom p { font-family: 'JetBrains Mono', monospace; font-size: 12px; color: var(--text-light); margin: 0; }
+    .bottom-bar { height: 4px; background: linear-gradient(90deg, #64748b 0%, #64748b 33%, var(--primary) 33%, var(--primary) 66%, #cbd5e1 66%, #cbd5e1 100%); }
+    @media (max-width: 768px) { h1 { font-family: 'Playfair Display', serif; font-size: 28px; } .lead { font-size: 18px; } .footer-content { grid-template-columns: 1fr 1fr; } .footer-brand { grid-column: span 2; } }
   </style>
 </head>
 <body>
 
   <nav>
     <div class="nav-container">
-      <a href="/" class="logo">ChurchLaunchpad</a>
-      <a href="/#get-started" class="nav-cta">Get Your Assessment</a>
+      <a href="/" class="logo">church launchpad</a>
+      <div class="nav-links">
+        <a href="/blog" class="nav-link">Resources</a>
+        <a href="https://sermonsync.church" class="nav-link">SermonSync</a>
+        <a href="/#get-started" class="nav-link">Get Found</a>
+      </div>
     </div>
   </nav>
 
   <article>
     <div class="container">
-      <p class="post-meta">Google • 5 min read</p>
+      <span class="post-tag">Google</span>
       
       <h1>Why Your Church Doesn't Show Up on Google (And How to Fix It)</h1>
       
-      <p class="lead">Someone in your city searched "church near me" this morning. They didn't find you. They found the megachurch 10 miles away instead. Here's why — and exactly how to fix it.</p>
+      <p class="subtitle">They searched. You didn't show up. Let's fix that.</p>
+      
+      <img src="https://images.unsplash.com/photo-1573804633927-bfcbcd909acd?w=1200&q=80" alt="Person searching on phone" class="featured-image">
       
       <h2>The Problem: You're Invisible</h2>
       
@@ -297,11 +356,7 @@
     </div>
   </article>
 
-  <footer>
-    <div class="container">
-      <p>ChurchLaunchpad — Built for churches by people who understand ministry.</p>
-    </div>
-  </footer>
-
-</body>
+  <footer><div class="container"><div class="footer-content"><div class="footer-brand"><a href="/" class="logo">church launchpad</a><span class="tagline">With Bernhard Suppan</span></div><div class="footer-col"><h4>Services</h4><ul><li><a href="/#get-started">Church Websites</a></li><li><a href="/#get-started">Social Media</a></li><li><a href="/#get-started">Google Business</a></li></ul></div><div class="footer-col"><h4>Resources</h4><ul><li><a href="/blog">Blog</a></li><li><a href="/#get-started">Free Assessment</a></li></ul></div><div class="footer-col"><h4>Connect</h4><ul><li><a href="/cdn-cgi/l/email-protection#f8909d949497b89b908d8a9b9094998d969b9088999cd6978a9f">Contact</a></li></ul></div></div><div class="footer-bottom"><p>© 2025-2026 ChurchLaunchpad — All rights reserved</p></div></div></footer>
+  <div class="bottom-bar"></div>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js" defer></script></body>
 </html>

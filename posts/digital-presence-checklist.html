@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>15-Minute Digital Presence Checklist | ChurchLaunchpad</title>
+  <meta name="description" content="A simple weekly routine that keeps your church visible online without eating into ministry time.">
+  <!-- Canonical -->
+  <link rel="canonical" href="https://churchlaunchpad.org/posts/digital-presence-checklist.html">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://churchlaunchpad.org/posts/digital-presence-checklist.html">
+  <meta property="og:title" content="15-Minute Digital Presence Checklist | ChurchLaunchpad">
+  <meta property="og:description" content="A simple weekly routine that keeps your church visible online without eating into ministry time.">
+  <meta property="og:image" content="https://churchlaunchpad.org/images/og-image.svg">
+  <meta property="og:site_name" content="ChurchLaunchpad">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="15-Minute Digital Presence Checklist | ChurchLaunchpad">
+  <meta name="twitter:description" content="A simple weekly routine that keeps your church visible online without eating into ministry time.">
+  <meta name="twitter:image" content="https://churchlaunchpad.org/images/og-image.svg">
+
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,800;1,700&family=Lora:wght@400;500;600&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+  
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    :root { --primary: #2563eb; --text: #1f2937; --text-light: #6b7280; --bg: #faf8f5; --bg-white: #ffffff; --border: #e5e7eb; }
+    body { font-family: 'JetBrains Mono', monospace; color: var(--text); line-height: 1.8; background: var(--bg); }
+    .container { max-width: 760px; margin: 0 auto; padding: 0 24px; }
+    .top-bar { height: 4px; background: linear-gradient(90deg, #64748b 0%, #64748b 33%, var(--primary) 33%, var(--primary) 66%, #cbd5e1 66%, #cbd5e1 100%); }
+    nav { padding: 20px 0; border-bottom: 2px solid #94a3b8; background: var(--bg); }
+    nav .container { max-width: 1320px; display: flex; justify-content: space-between; align-items: center; }
+    .logo { font-family: 'Playfair Display', serif; font-size: 22px; font-weight: 900; font-style: italic; color: var(--text); text-decoration: none; padding-bottom: 6px; position: relative; display: inline-block; }
+    .logo::after { content: ''; position: absolute; bottom: 0; left: -8px; width: 100%; height: 4px; background: linear-gradient(90deg, #64748b 33%, var(--primary) 33%, var(--primary) 66%, #cbd5e1 66%); }
+    .nav-links { display: flex; align-items: center; gap: 36px; }
+    .nav-link { font-family: 'Playfair Display', serif; color: var(--text); text-decoration: none; font-weight: 700; font-size: 22px; }
+    article { padding: 60px 0 80px; }
+    .post-tag { display: inline-block; background: rgba(37, 99, 235, 0.1); color: var(--primary); padding: 6px 14px; border-radius: 4px; font-family: 'JetBrains Mono', monospace; font-size: 12px; text-transform: uppercase; margin-bottom: 20px; }
+    h1 { font-family: 'Playfair Display', serif; font-size: 42px; font-weight: 800; line-height: 1.2; margin-bottom: 24px; }
+    .subtitle { font-size: 20px; color: var(--text-light); margin-bottom: 40px; font-style: italic; }
+    .featured-image { width: 100%; height: 400px; object-fit: cover; border-radius: 12px; margin-bottom: 40px; }
+    h2 { font-family: 'Playfair Display', serif; font-size: 28px; font-weight: 700; margin: 48px 0 20px; }
+    h3 { font-family: 'Playfair Display', serif; font-size: 22px; font-weight: 700; margin: 32px 0 16px; }
+    p { margin-bottom: 20px; font-size: 18px; }
+    ul, ol { margin: 20px 0 20px 24px; }
+    li { margin-bottom: 12px; font-size: 18px; }
+    .checklist { background: var(--bg-white); border: 2px solid var(--border); border-radius: 12px; padding: 32px; margin: 32px 0; }
+    .checklist h3 { margin-top: 0; }
+    .checklist-item { display: flex; align-items: flex-start; gap: 12px; padding: 12px 0; border-bottom: 1px solid var(--border); }
+    .checklist-item:last-child { border-bottom: none; }
+    .checkbox { width: 24px; height: 24px; border: 2px solid var(--primary); border-radius: 4px; flex-shrink: 0; display: flex; align-items: center; justify-content: center; font-size: 14px; }
+    .time-badge { display: inline-block; background: var(--primary); color: white; padding: 4px 10px; border-radius: 20px; font-family: 'JetBrains Mono', monospace; font-size: 12px; margin-bottom: 8px; }
+    .highlight-box { background: var(--primary); color: white; padding: 32px; border-radius: 12px; margin: 40px 0; }
+    .highlight-box h3 { color: white; margin-top: 0; }
+    .highlight-box p { color: rgba(255,255,255,0.9); margin-bottom: 0; }
+    .cta-box { background: var(--bg-white); border: 2px solid var(--primary); padding: 40px; border-radius: 12px; margin: 48px 0; text-align: center; }
+    .cta-box h3 { margin-top: 0; color: var(--primary); }
+    .cta-button { display: inline-block; background: var(--primary); color: white; padding: 14px 32px; border-radius: 6px; text-decoration: none; font-family: 'JetBrains Mono', monospace; font-size: 14px; font-weight: 600; margin-top: 16px; }
+    footer { padding: 80px 0 40px; background: #f1f5f9; border-top: 2px solid #94a3b8; }
+    footer .container { max-width: 1320px; }
+    .footer-content { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 60px; margin-bottom: 60px; }
+    .footer-brand .logo { font-family: 'Playfair Display', serif; font-size: 24px; font-weight: 700; color: var(--text); text-decoration: none; display: block; margin-bottom: 8px; border-bottom: none; }
+    .footer-brand .tagline { font-family: 'JetBrains Mono', monospace; font-size: 12px; color: var(--text-light); text-transform: uppercase; letter-spacing: 1px; }
+    .footer-col h4 { font-family: 'JetBrains Mono', monospace; font-size: 12px; font-weight: 600; color: var(--text); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 20px; }
+    .footer-col ul { list-style: none; }
+    .footer-col li { margin-bottom: 12px; }
+    .footer-col a { font-family: 'Lora', serif; font-size: 15px; color: var(--text); text-decoration: underline; text-underline-offset: 3px; text-decoration-color: var(--border); }
+    .footer-bottom { display: flex; justify-content: space-between; align-items: center; padding-top: 24px; border-top: 1px solid var(--border); }
+    .footer-bottom p { font-family: 'JetBrains Mono', monospace; font-size: 12px; color: var(--text-light); margin: 0; }
+    .bottom-bar { height: 4px; background: linear-gradient(90deg, #64748b 0%, #64748b 33%, var(--primary) 33%, var(--primary) 66%, #cbd5e1 66%, #cbd5e1 100%); }
+    @media (max-width: 768px) { h1 { font-family: 'Playfair Display', serif; font-size: 32px; } .featured-image { height: 250px; } .footer-content { grid-template-columns: 1fr 1fr; } .footer-brand { grid-column: span 2; } }
+  </style>
+</head>
+<body>
+  <div class="top-bar"></div>
+  <nav><div class="container"><a href="/" class="logo">church launchpad</a><div class="nav-links"><a href="/blog" class="nav-link">Resources</a><a href="https://sermonsync.church" class="nav-link">SermonSync</a><a href="/#get-started" class="nav-link">Get Found</a></div></div></nav>
+
+  <article>
+    <div class="container">
+      <span class="post-tag">Strategy</span>
+      <h1>The 15-Minute Digital Presence Checklist for Busy Pastors</h1>
+      <p class="subtitle">Stay visible online without sacrificing ministry time.</p>
+      
+      <img src="https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=1200&q=80" alt="Checklist and planning" class="featured-image">
+      
+      <p>You don't have time for digital marketing. I get it.</p>
+      
+      <p>You're preparing sermons, counseling families, visiting hospitals, leading volunteers, and somehow supposed to "build an online presence" too?</p>
+      
+      <p>Here's the truth: <strong>you don't need hours. You need 15 focused minutes a week.</strong></p>
+      
+      <p>This checklist is designed for pastors who have zero time but know they can't completely ignore the digital world. Do these things, in this order, and you'll stay visible without burning out.</p>
+      
+      <h2>The Weekly 15-Minute Routine</h2>
+      
+      <div class="checklist">
+        <h3>Monday Morning (5 minutes)</h3>
+        <div class="checklist-item">
+          <div class="checkbox">☐</div>
+          <div>
+            <span class="time-badge">1 min</span>
+            <p><strong>Check Google Business for new reviews</strong><br>Reply to any new reviews with a simple "Thank you for visiting! We'd love to see you again."</p>
+          </div>
+        </div>
+        <div class="checklist-item">
+          <div class="checkbox">☐</div>
+          <div>
+            <span class="time-badge">2 min</span>
+            <p><strong>Reply to any Facebook/Instagram messages</strong><br>Don't let messages sit. Even a quick "Thanks for reaching out! We'll get back to you soon" is better than silence.</p>
+          </div>
+        </div>
+        <div class="checklist-item">
+          <div class="checkbox">☐</div>
+          <div>
+            <span class="time-badge">2 min</span>
+            <p><strong>Post one thing about Sunday's service</strong><br>A photo, a quote from the sermon, or just "Great to see everyone yesterday!" Something is better than nothing.</p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="checklist">
+        <h3>Wednesday (5 minutes)</h3>
+        <div class="checklist-item">
+          <div class="checkbox">☐</div>
+          <div>
+            <span class="time-badge">3 min</span>
+            <p><strong>Schedule a scripture graphic for Friday</strong><br>Use Canva templates. Pick a verse. Add your logo. Schedule to post Friday morning.</p>
+          </div>
+        </div>
+        <div class="checklist-item">
+          <div class="checkbox">☐</div>
+          <div>
+            <span class="time-badge">2 min</span>
+            <p><strong>Check website for anything outdated</strong><br>Scroll the homepage. Is there an old event banner? Outdated hours? Fix it or delete it.</p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="checklist">
+        <h3>Saturday (5 minutes)</h3>
+        <div class="checklist-item">
+          <div class="checkbox">☐</div>
+          <div>
+            <span class="time-badge">2 min</span>
+            <p><strong>Post a Sunday reminder</strong><br>"See you tomorrow at 10 AM!" with service times and address. Make it easy for someone to decide to come.</p>
+          </div>
+        </div>
+        <div class="checklist-item">
+          <div class="checkbox">☐</div>
+          <div>
+            <span class="time-badge">3 min</span>
+            <p><strong>Update Google Business hours if needed</strong><br>Holiday hours? Special service? Update Google so people don't show up to a closed building.</p>
+          </div>
+        </div>
+      </div>
+      
+      <h2>Why This Works</h2>
+      
+      <h3>Consistency Over Volume</h3>
+      <p>You don't need to post every day. You need to post every week, without fail. 3 posts a week, every week, beats 20 posts one week and then nothing for a month.</p>
+      
+      <h3>Response Time Matters</h3>
+      <p>When someone messages your church, they're interested NOW. Wait a week to respond and they've moved on. Check messages on Monday — it takes 2 minutes and could be the difference between a visitor and a missed opportunity.</p>
+      
+      <h3>Google Business Is Your Secret Weapon</h3>
+      <p>Most churches ignore Google Business. But it's where people actually find you. Spend 3 minutes a week on it and you'll outpace 90% of churches in your area.</p>
+      
+      <div class="highlight-box">
+        <h3>Pro Tip: Set Phone Reminders</h3>
+        <p>Set three recurring reminders: Monday 9 AM, Wednesday 9 AM, Saturday 9 AM. When your phone buzzes, do the checklist. 15 minutes total, spread across the week.</p>
+      </div>
+      
+      <h2>What To Skip</h2>
+      
+      <p>Busy pastors try to do everything and end up doing nothing. Here's what you can safely ignore:</p>
+      
+      <ul>
+        <li><strong>Twitter/X</strong> — Unless your congregation is actively there, skip it.</li>
+        <li><strong>TikTok</strong> — Takes too much time to do well. Not worth it for most churches.</li>
+        <li><strong>LinkedIn</strong> — Not where your visitors are looking.</li>
+        <li><strong>Blogging</strong> — Great if you have time, but not essential.</li>
+      </ul>
+      
+      <p>Focus on: <strong>Facebook, Instagram, Google Business, and your website.</strong> That's it.</p>
+      
+      <h2>When You're Ready for More</h2>
+      
+      <p>Once this 15-minute routine becomes automatic, you can add:</p>
+      
+      <ul>
+        <li>Sermon clips from Sunday (huge engagement)</li>
+        <li>Behind-the-scenes photos of ministry</li>
+        <li>Member spotlights and testimonies</li>
+        <li>Community event shares</li>
+      </ul>
+      
+      <p>But start with the basics. Master the checklist. Then expand.</p>
+      
+      <div class="cta-box">
+        <h3>Too Busy Even for 15 Minutes?</h3>
+        <p>We handle your entire digital presence so you can focus on ministry.</p>
+        <a href="/#get-started" class="cta-button">Get Started →</a>
+      </div>
+      
+    </div>
+  </article>
+
+  <footer><div class="container"><div class="footer-content"><div class="footer-brand"><a href="/" class="logo">church launchpad</a><span class="tagline">With Bernhard Suppan</span></div><div class="footer-col"><h4>Services</h4><ul><li><a href="/#get-started">Church Websites</a></li><li><a href="/#get-started">Social Media</a></li><li><a href="/#get-started">Google Business</a></li></ul></div><div class="footer-col"><h4>Resources</h4><ul><li><a href="/blog">Blog</a></li><li><a href="/#get-started">Free Assessment</a></li></ul></div><div class="footer-col"><h4>Connect</h4><ul><li><a href="/cdn-cgi/l/email-protection#bbd3ded7d7d4fbd8d3cec9d8d3d7daced5d8d3cbdadf95d4c9dc">Contact</a></li></ul></div></div><div class="footer-bottom"><p>© 2025-2026 ChurchLaunchpad — All rights reserved</p></div></div></footer>
+  <div class="bottom-bar"></div>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js" defer></script></body>
+</html>

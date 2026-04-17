@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>5 Church Website Mistakes to Fix | ChurchLaunchpad</title>
+  <meta name="description" content="Your website might be driving people away before they ever visit. Here's what to fix first.">
+  <!-- Canonical -->
+  <link rel="canonical" href="https://churchlaunchpad.org/posts/church-website-mistakes.html">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://churchlaunchpad.org/posts/church-website-mistakes.html">
+  <meta property="og:title" content="5 Church Website Mistakes to Fix | ChurchLaunchpad">
+  <meta property="og:description" content="Your website might be driving people away before they ever visit. Here's what to fix first.">
+  <meta property="og:image" content="https://churchlaunchpad.org/images/og-image.svg">
+  <meta property="og:site_name" content="ChurchLaunchpad">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="5 Church Website Mistakes to Fix | ChurchLaunchpad">
+  <meta name="twitter:description" content="Your website might be driving people away before they ever visit. Here's what to fix first.">
+  <meta name="twitter:image" content="https://churchlaunchpad.org/images/og-image.svg">
+
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,800;1,700&family=Lora:wght@400;500;600&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+  
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    :root { --primary: #2563eb; --text: #1f2937; --text-light: #6b7280; --bg: #faf8f5; --bg-white: #ffffff; --border: #e5e7eb; }
+    body { font-family: 'JetBrains Mono', monospace; color: var(--text); line-height: 1.8; background: var(--bg); }
+    .container { max-width: 760px; margin: 0 auto; padding: 0 24px; }
+    .top-bar { height: 4px; background: linear-gradient(90deg, #64748b 0%, #64748b 33%, var(--primary) 33%, var(--primary) 66%, #cbd5e1 66%, #cbd5e1 100%); }
+    nav { padding: 20px 0; border-bottom: 2px solid #94a3b8; background: var(--bg); }
+    nav .container { max-width: 1320px; display: flex; justify-content: space-between; align-items: center; }
+    .logo { font-family: 'Playfair Display', serif; font-size: 22px; font-weight: 900; font-style: italic; color: var(--text); text-decoration: none; padding-bottom: 6px; position: relative; display: inline-block; }
+    .logo::after { content: ''; position: absolute; bottom: 0; left: -8px; width: 100%; height: 4px; background: linear-gradient(90deg, #64748b 33%, var(--primary) 33%, var(--primary) 66%, #cbd5e1 66%); }
+    .nav-links { display: flex; align-items: center; gap: 36px; }
+    .nav-link { font-family: 'Playfair Display', serif; color: var(--text); text-decoration: none; font-weight: 700; font-size: 22px; }
+    article { padding: 60px 0 80px; }
+    .post-tag { display: inline-block; background: rgba(37, 99, 235, 0.1); color: var(--primary); padding: 6px 14px; border-radius: 4px; font-family: 'JetBrains Mono', monospace; font-size: 12px; text-transform: uppercase; margin-bottom: 20px; }
+    h1 { font-family: 'Playfair Display', serif; font-size: 42px; font-weight: 800; line-height: 1.2; margin-bottom: 24px; }
+    .subtitle { font-size: 20px; color: var(--text-light); margin-bottom: 40px; font-style: italic; }
+    .featured-image { width: 100%; height: 400px; object-fit: cover; border-radius: 12px; margin-bottom: 40px; }
+    h2 { font-family: 'Playfair Display', serif; font-size: 28px; font-weight: 700; margin: 48px 0 20px; }
+    h3 { font-family: 'Playfair Display', serif; font-size: 22px; font-weight: 700; margin: 32px 0 16px; }
+    p { margin-bottom: 20px; font-size: 18px; }
+    ul, ol { margin: 20px 0 20px 24px; }
+    li { margin-bottom: 12px; font-size: 18px; }
+    blockquote { border-left: 4px solid var(--primary); padding-left: 24px; margin: 32px 0; font-style: italic; color: var(--text-light); }
+    .mistake-box { background: #fef2f2; border-left: 4px solid #ef4444; padding: 24px; margin: 32px 0; border-radius: 0 12px 12px 0; }
+    .mistake-box h3 { color: #dc2626; margin-top: 0; }
+    .fix-box { background: #f0fdf4; border-left: 4px solid #22c55e; padding: 24px; margin: 32px 0; border-radius: 0 12px 12px 0; }
+    .fix-box h3 { color: #16a34a; margin-top: 0; }
+    .cta-box { background: var(--bg-white); border: 2px solid var(--primary); padding: 40px; border-radius: 12px; margin: 48px 0; text-align: center; }
+    .cta-box h3 { margin-top: 0; color: var(--primary); }
+    .cta-button { display: inline-block; background: var(--primary); color: white; padding: 14px 32px; border-radius: 6px; text-decoration: none; font-family: 'JetBrains Mono', monospace; font-size: 14px; font-weight: 600; margin-top: 16px; }
+    footer { padding: 80px 0 40px; background: #f1f5f9; border-top: 2px solid #94a3b8; }
+    footer .container { max-width: 1320px; }
+    .footer-content { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 60px; margin-bottom: 60px; }
+    .footer-brand .logo { font-family: 'Playfair Display', serif; font-size: 24px; font-weight: 700; color: var(--text); text-decoration: none; display: block; margin-bottom: 8px; border-bottom: none; }
+    .footer-brand .tagline { font-family: 'JetBrains Mono', monospace; font-size: 12px; color: var(--text-light); text-transform: uppercase; letter-spacing: 1px; }
+    .footer-col h4 { font-family: 'JetBrains Mono', monospace; font-size: 12px; font-weight: 600; color: var(--text); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 20px; }
+    .footer-col ul { list-style: none; }
+    .footer-col li { margin-bottom: 12px; }
+    .footer-col a { font-family: 'Lora', serif; font-size: 15px; color: var(--text); text-decoration: underline; text-underline-offset: 3px; text-decoration-color: var(--border); }
+    .footer-bottom { display: flex; justify-content: space-between; align-items: center; padding-top: 24px; border-top: 1px solid var(--border); }
+    .footer-bottom p { font-family: 'JetBrains Mono', monospace; font-size: 12px; color: var(--text-light); margin: 0; }
+    .bottom-bar { height: 4px; background: linear-gradient(90deg, #64748b 0%, #64748b 33%, var(--primary) 33%, var(--primary) 66%, #cbd5e1 66%, #cbd5e1 100%); }
+    @media (max-width: 768px) { h1 { font-family: 'Playfair Display', serif; font-size: 32px; } .featured-image { height: 250px; } .footer-content { grid-template-columns: 1fr 1fr; } .footer-brand { grid-column: span 2; } }
+  </style>
+</head>
+<body>
+  <div class="top-bar"></div>
+  <nav><div class="container"><a href="/" class="logo">church launchpad</a><div class="nav-links"><a href="/blog" class="nav-link">Resources</a><a href="https://sermonsync.church" class="nav-link">SermonSync</a><a href="/#get-started" class="nav-link">Get Found</a></div></div></nav>
+
+  <article>
+    <div class="container">
+      <span class="post-tag">Website</span>
+      <h1>5 Church Website Mistakes That Are Costing You Visitors</h1>
+      <p class="subtitle">Your website might be driving people away before they ever walk through your doors.</p>
+      
+      <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1200&q=80" alt="Website on laptop" class="featured-image">
+      
+      <p>Someone in your community just Googled "churches near me."</p>
+      
+      <p>They found you. They clicked. They landed on your website.</p>
+      
+      <p>And within 3 seconds, they left.</p>
+      
+      <p><strong>What happened?</strong></p>
+      
+      <p>Probably one of these five mistakes. Let's fix them.</p>
+      
+      <h2>Mistake #1: Service Times Are Buried</h2>
+      
+      <div class="mistake-box">
+        <h3>The Problem</h3>
+        <p>The #1 thing visitors want to know: When can I show up? If they have to hunt for it, they won't.</p>
+      </div>
+      
+      <p>I've seen church websites where service times are on a separate "About" page, buried in a paragraph of text, or worst of all — not listed at all.</p>
+      
+      <p>This is like a restaurant hiding their hours. People will just go somewhere else.</p>
+      
+      <div class="fix-box">
+        <h3>The Fix</h3>
+        <p>Service times should be visible on your homepage without scrolling. Big. Bold. Impossible to miss. "Sunday 10:00 AM" — that's it.</p>
+      </div>
+      
+      <h2>Mistake #2: No Clear Address</h2>
+      
+      <div class="mistake-box">
+        <h3>The Problem</h3>
+        <p>You'd be shocked how many church websites don't show a physical address on the homepage. Some only have it in the footer. Some don't have it at all.</p>
+      </div>
+      
+      <p>First-time visitors need to know where you are. If they can't find it in 5 seconds, they're gone.</p>
+      
+      <div class="fix-box">
+        <h3>The Fix</h3>
+        <p>Address on the homepage. Linked to Google Maps. Bonus: add a "Get Directions" button that opens their phone's navigation app.</p>
+      </div>
+      
+      <h2>Mistake #3: Outdated Information</h2>
+      
+      <div class="mistake-box">
+        <h3>The Problem</h3>
+        <p>"Join us for our Easter 2023 service!" It's now 2026. That event banner has been there for 3 years.</p>
+      </div>
+      
+      <p>Nothing says "we don't care" like outdated content. It makes visitors wonder if the church is even still active.</p>
+      
+      <div class="fix-box">
+        <h3>The Fix</h3>
+        <p>Remove dated content or set calendar reminders to update it. Better yet: use evergreen content that doesn't expire. "Join us this Sunday" works forever.</p>
+      </div>
+      
+      <h2>Mistake #4: Not Mobile-Friendly</h2>
+      
+      <div class="mistake-box">
+        <h3>The Problem</h3>
+        <p>60%+ of your visitors are on phones. If your site doesn't work on mobile, you're invisible to more than half of potential visitors.</p>
+      </div>
+      
+      <p>Tiny text. Buttons too small to tap. Horizontal scrolling. All of these send mobile visitors running.</p>
+      
+      <div class="fix-box">
+        <h3>The Fix</h3>
+        <p>Test your site on your phone right now. Can you find service times in under 5 seconds? Can you tap the phone number to call? If not, it's time for a redesign.</p>
+      </div>
+      
+      <h2>Mistake #5: No Clear Next Step</h2>
+      
+      <div class="mistake-box">
+        <h3>The Problem</h3>
+        <p>Someone lands on your site. They're interested. Now what? If you don't tell them what to do next, they'll do nothing.</p>
+      </div>
+      
+      <p>Most church websites are passive. They display information but don't invite action.</p>
+      
+      <div class="fix-box">
+        <h3>The Fix</h3>
+        <p>Add a clear call-to-action: "Plan Your Visit" or "What to Expect Sunday." Make it a button. Make it obvious. Guide them to the next step.</p>
+      </div>
+      
+      <h2>The 5-Second Test</h2>
+      
+      <p>Here's how to test your church website right now:</p>
+      
+      <ol>
+        <li>Open your site on your phone</li>
+        <li>Set a 5-second timer</li>
+        <li>Can you find: Service time + Address + What to do next?</li>
+      </ol>
+      
+      <p>If the answer is no, you're losing visitors.</p>
+      
+      <div class="cta-box">
+        <h3>Want a Website That Actually Works?</h3>
+        <p>We build church websites that convert visitors into guests.</p>
+        <a href="/#get-started" class="cta-button">Get Started →</a>
+      </div>
+      
+    </div>
+  </article>
+
+  <footer><div class="container"><div class="footer-content"><div class="footer-brand"><a href="/" class="logo">church launchpad</a><span class="tagline">With Bernhard Suppan</span></div><div class="footer-col"><h4>Services</h4><ul><li><a href="/#get-started">Church Websites</a></li><li><a href="/#get-started">Social Media</a></li><li><a href="/#get-started">Google Business</a></li></ul></div><div class="footer-col"><h4>Resources</h4><ul><li><a href="/blog">Blog</a></li><li><a href="/#get-started">Free Assessment</a></li></ul></div><div class="footer-col"><h4>Connect</h4><ul><li><a href="/cdn-cgi/l/email-protection#08606d646467486b607d7a6b6064697d666b6078696c26677a6f">Contact</a></li></ul></div></div><div class="footer-bottom"><p>© 2025-2026 ChurchLaunchpad — All rights reserved</p></div></div></footer>
+  <div class="bottom-bar"></div>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js" defer></script></body>
+</html>
