@@ -973,7 +973,7 @@
         <h2>Get Your Free Church Assessment</h2>
         <p>Tell me about your church and I'll reach out within 24 hours with specific recommendations.</p>
         
-        <form id="assessment-form" action="https://formsubmit.co/e593aa86b37ef30fb46dbe99ca3ca3b4" method="POST" onsubmit="addToBeehiiv(event)">
+        <form id="assessment-form" action="https://formsubmit.co/e593aa86b37ef30fb46dbe99ca3ca3b4" method="POST">
           <input type="hidden" name="_subject" value="ChurchLaunchpad Assessment Request">
           <input type="hidden" name="_captcha" value="false">
           <input type="hidden" name="_next" value="https://churchlaunchpad.org/?submitted=true">
@@ -1012,67 +1012,6 @@
           <button type="submit" class="submit-btn">Get My Free Assessment →</button>
         </form>
         
-        <script>
-        function addToBeehiiv(e) {
-          const email = document.getElementById('a-email').value;
-          const name = document.getElementById('a-name').value;
-          const church = document.getElementById('a-church').value;
-          const location = document.getElementById('a-location').value;
-          fetch('https://api.beehiiv.com/v2/publications/pub_01b71ad7-034a-42bb-999b-b667ea2a30aa/subscriptions', {
-            method: 'POST',
-            headers: {'Content-Type':'application/json','Authorization':'Bearer 04kXGAKYKNqHXeo47wdEpZlz1mqMI754yW8vRcuSlG6Oha3hH1uz7JBIXuvZTxGO'},
-            body: JSON.stringify({email, referring_site:'churchlaunchpad.org', custom_fields:[{name:'name',value:name},{name:'church',value:church},{name:'location',value:location}]})
-          }).catch(() => {});
-          // Form submits normally to formsubmit.co
-        }
-        </script>
-        
-        <script>
-        async function submitAssessment(e) {
-          e.preventDefault();
-          const btn = document.getElementById('a-btn');
-          btn.textContent = 'Sending...'; btn.disabled = true;
-          const services = [...document.querySelectorAll('input[name="services"]:checked')].map(el => el.value).join(', ');
-          const body = [
-            'Church: ' + document.getElementById('a-church').value,
-            'Pastor: ' + document.getElementById('a-name').value,
-            'Email: ' + document.getElementById('a-email').value,
-            'Location: ' + document.getElementById('a-location').value,
-            'Needs help with: ' + (services || 'not specified')
-          ].join('\n');
-          try {
-            const [beehiivRes] = await Promise.all([
-              fetch('https://api.beehiiv.com/v2/publications/pub_01b71ad7-034a-42bb-999b-b667ea2a30aa/subscriptions', {
-                method: 'POST',
-                headers: {'Content-Type':'application/json','Authorization':'Bearer 04kXGAKYKNqHXeo47wdEpZlz1mqMI754yW8vRcuSlG6Oha3hH1uz7JBIXuvZTxGO'},
-                body: JSON.stringify({
-                  email: document.getElementById('a-email').value,
-                  referring_site: 'churchlaunchpad.org',
-                  custom_fields: [
-                    {name:'name', value: document.getElementById('a-name').value},
-                    {name:'church', value: document.getElementById('a-church').value},
-                    {name:'location', value: document.getElementById('a-location').value},
-                    {name:'services', value: services}
-                  ]
-                })
-              }),
-              fetch('https://formspree.io/f/hello@churchlaunchpad.org', {
-                method: 'POST',
-                headers: {'Content-Type':'application/json', 'Accept':'application/json'},
-                body: JSON.stringify({
-                  _subject: 'ChurchLaunchpad Assessment: ' + document.getElementById('a-church').value,
-                  message: body
-                })
-              })
-            ]);
-            document.getElementById('a-success').style.display='block';
-            document.getElementById('assessment-form').style.display='none';
-          } catch {
-            document.getElementById('a-error').style.display='block';
-            btn.textContent='Get My Free Assessment →'; btn.disabled=false;
-          }
-        }
-        </script>
       </div>
     </div>
   </section>
