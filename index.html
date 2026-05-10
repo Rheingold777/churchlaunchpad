@@ -675,8 +675,8 @@
     }
     .footer-content {
       display: grid;
-      grid-template-columns: 2fr 1fr 1fr 1fr;
-      gap: 60px;
+      grid-template-columns: 1.5fr repeat(3, minmax(120px, 0.8fr)) 1.4fr;
+      gap: 40px;
       margin-bottom: 60px;
     }
     .footer-brand .logo {
@@ -720,6 +720,66 @@
     }
     .footer-col a:hover {
       text-decoration-color: var(--primary);
+    }
+    .newsletter-copy {
+      font-size: 14px;
+      line-height: 1.5;
+      color: var(--text-light);
+      margin: -8px 0 14px;
+    }
+    .newsletter-form {
+      display: grid;
+      gap: 10px;
+    }
+    .newsletter-field {
+      position: absolute;
+      left: -9999px;
+      width: 1px;
+      height: 1px;
+      overflow: hidden;
+    }
+    .newsletter-form input[type="email"] {
+      width: 100%;
+      padding: 11px 12px;
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      background: var(--bg-white);
+      color: var(--text);
+      font-family: 'Lora', serif;
+      font-size: 14px;
+    }
+    .newsletter-form input[type="email"]:focus {
+      outline: none;
+      border-color: var(--primary);
+    }
+    .newsletter-form button {
+      width: 100%;
+      padding: 11px 12px;
+      border: 0;
+      border-radius: 4px;
+      background: var(--text);
+      color: white;
+      cursor: pointer;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+    .newsletter-form button:hover,
+    .newsletter-form button:focus {
+      background: #374151;
+    }
+    .newsletter-form button:disabled {
+      cursor: wait;
+      opacity: 0.75;
+    }
+    .newsletter-message {
+      min-height: 20px;
+      color: var(--text-light);
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 11px;
+      line-height: 1.5;
     }
     .footer-bottom {
       display: flex;
@@ -1044,6 +1104,18 @@
             <li><a href="mailto:hello@churchlaunchpad.org">Contact</a></li>
           </ul>
         </div>
+        <div class="footer-col footer-newsletter">
+          <h4>Newsletter</h4>
+          <p class="newsletter-copy">Practical website and Google visibility notes for small churches.</p>
+          <form class="newsletter-form" id="newsletter-form">
+            <label class="newsletter-field" for="newsletter-website">Website</label>
+            <input class="newsletter-field" type="text" id="newsletter-website" name="website" tabindex="-1" autocomplete="off">
+            <label class="newsletter-field" for="newsletter-email">Email</label>
+            <input type="email" id="newsletter-email" name="email" placeholder="you@example.com" autocomplete="email" required>
+            <button type="submit">Subscribe</button>
+            <p class="newsletter-message" id="newsletter-message" role="status" aria-live="polite"></p>
+          </form>
+        </div>
       </div>
       <div class="footer-bottom">
         <p>© 2025-2026 ChurchLaunchpad — All rights reserved</p>
@@ -1057,5 +1129,45 @@
 
   <div class="bottom-bar"></div>
 
+  <script>
+    const newsletterForm = document.getElementById('newsletter-form');
+    if (newsletterForm) {
+      const emailInput = document.getElementById('newsletter-email');
+      const trapInput = document.getElementById('newsletter-website');
+      const message = document.getElementById('newsletter-message');
+      const button = newsletterForm.querySelector('button');
+
+      newsletterForm.addEventListener('submit', async (event) => {
+        event.preventDefault();
+        message.textContent = 'Subscribing...';
+        button.disabled = true;
+
+        try {
+          const response = await fetch('/api/subscribe', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+              email: emailInput.value,
+              website: trapInput.value,
+            }),
+          });
+          const result = await response.json().catch(() => ({}));
+
+          if (!response.ok || !result.ok) {
+            throw new Error(result.error || 'Signup failed');
+          }
+
+          newsletterForm.reset();
+          message.textContent = result.alreadySubscribed
+            ? 'You are already on the list.'
+            : 'Check your inbox to confirm.';
+        } catch {
+          message.textContent = 'Please try again or email hello@churchlaunchpad.org.';
+        } finally {
+          button.disabled = false;
+        }
+      });
+    }
+  </script>
 </body>
 </html>
