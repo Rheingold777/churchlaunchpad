@@ -1033,11 +1033,9 @@
         <h2>Get Your Free Church Assessment</h2>
         <p>Tell me about your church and I'll reach out within 24 hours with specific recommendations.</p>
         
-        <form id="assessment-form" action="https://formsubmit.co/e593aa86b37ef30fb46dbe99ca3ca3b4" method="POST">
-          <input type="hidden" name="_subject" value="ChurchLaunchpad Assessment Request">
-          <input type="hidden" name="_captcha" value="false">
-          <input type="hidden" name="_next" value="https://churchlaunchpad.org/?submitted=true">
-          <input type="hidden" name="_template" value="table">
+        <form id="assessment-form" action="/api/assessment" method="POST">
+          <label class="newsletter-field" for="assessment-website">Website</label>
+          <input class="newsletter-field" type="text" id="assessment-website" name="website" tabindex="-1" autocomplete="off">
           
           <div class="form-group">
             <label>Church Name</label>
@@ -1070,6 +1068,7 @@
           </div>
           
           <button type="submit" class="submit-btn">Get My Free Assessment →</button>
+          <p class="newsletter-message" id="assessment-message" role="status" aria-live="polite"></p>
         </form>
         
       </div>
@@ -1130,6 +1129,13 @@
   <div class="bottom-bar"></div>
 
   <script>
+    const assessmentMessage = document.getElementById('assessment-message');
+    if (assessmentMessage && new URLSearchParams(window.location.search).get('submitted') === 'true') {
+      assessmentMessage.textContent = 'Thanks. I will review this and reach out soon.';
+      document.getElementById('assessment-form')?.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      window.history.replaceState({}, '', window.location.pathname);
+    }
+
     const newsletterForm = document.getElementById('newsletter-form');
     if (newsletterForm) {
       const emailInput = document.getElementById('newsletter-email');
