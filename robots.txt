@@ -1,0 +1,5 @@
+# robots.txt for churchlaunchpad.org
+User-agent: *
+Allow: /
+
+Sitemap: https://churchlaunchpad.org/sitemap.xml
