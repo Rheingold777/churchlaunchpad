@@ -26,11 +26,15 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
       - name: Verify checker regression tests
         run: |
           python -B tools/test_sitecheck.py
           python -B tools/test_prepare_netlify_deploy.py
           python -B tools/test_verify_netlify_form_receipt.py
+          node --test tools/test_subscribe_function.mjs
       - name: Verify source contract
         run: python tools/sitecheck.py source --config website-ops.json --root . --report artifacts/source-report.json
       - name: Preserve source evidence

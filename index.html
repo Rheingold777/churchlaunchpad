@@ -691,8 +691,8 @@
     }
     .footer-content {
       display: grid;
-      grid-template-columns: 2fr 1fr 1fr 1fr;
-      gap: 60px;
+      grid-template-columns: 1.5fr repeat(3, minmax(120px, 0.8fr)) 1.4fr;
+      gap: 40px;
       margin-bottom: 60px;
     }
     .footer-brand .logo {
@@ -737,6 +737,72 @@
     .footer-col a:hover {
       text-decoration-color: var(--primary);
     }
+    .newsletter-copy {
+      font-size: 14px;
+      line-height: 1.5;
+      color: var(--text-light);
+      margin: -8px 0 14px;
+    }
+    .newsletter-form {
+      display: grid;
+      gap: 10px;
+    }
+    .newsletter-field {
+      position: absolute;
+      left: -9999px;
+      width: 1px;
+      height: 1px;
+      overflow: hidden;
+    }
+    .newsletter-form input[type="email"] {
+      width: 100%;
+      padding: 11px 12px;
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      background: var(--bg-white);
+      color: var(--text);
+      font-family: 'Lora', serif;
+      font-size: 14px;
+    }
+    .newsletter-form input[type="email"]:focus {
+      outline: none;
+      border-color: var(--primary);
+    }
+    .newsletter-form button {
+      width: 100%;
+      padding: 11px 12px;
+      border: 0;
+      border-radius: 4px;
+      background: var(--text);
+      color: white;
+      cursor: pointer;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+    .newsletter-form button:hover,
+    .newsletter-form button:focus {
+      background: #374151;
+    }
+    .newsletter-form button:disabled {
+      cursor: wait;
+      opacity: 0.75;
+    }
+    .newsletter-message {
+      min-height: 20px;
+      color: var(--text-light);
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 11px;
+      line-height: 1.5;
+    }
+    .newsletter-privacy {
+      color: var(--text-light);
+      font-size: 11px;
+      line-height: 1.5;
+      margin: 0;
+    }
     .footer-bottom {
       display: flex;
       justify-content: space-between;
@@ -749,19 +815,6 @@
       font-size: 12px;
       color: var(--text-light);
     }
-    .footer-social {
-      display: flex;
-      gap: 16px;
-    }
-    .footer-social a {
-      font-size: 18px;
-      color: var(--text);
-      text-decoration: none;
-    }
-    .footer-social a:hover {
-      color: var(--primary);
-    }
-    
     @media (max-width: 768px) {
       .footer-content {
         grid-template-columns: 1fr 1fr;
@@ -844,7 +897,7 @@
       <div class="nav-links">
         <a href="#solutions" class="nav-link">Solutions</a>
         <a href="/blog" class="nav-link">Resources</a>
-        <a href="https://sermonsync.church" class="nav-link sermonsync-highlight">SermonSync</a>
+        <a href="https://sermonrecap.church" class="nav-link sermonsync-highlight">SermonRecap</a>
         <a href="#get-started" class="nav-link">Get Found</a>
       </div>
       <div class="hamburger" onclick="document.getElementById('mobileMenu').classList.add('open')">
@@ -857,7 +910,7 @@
     <button class="mobile-menu-close" onclick="document.getElementById('mobileMenu').classList.remove('open')">×</button>
     <a href="#solutions" onclick="document.getElementById('mobileMenu').classList.remove('open')">Solutions</a>
     <a href="/blog" onclick="document.getElementById('mobileMenu').classList.remove('open')">Resources</a>
-    <a href="https://sermonsync.church" class="sermonsync-highlight">SermonSync</a>
+    <a href="https://sermonrecap.church" class="sermonsync-highlight">SermonRecap</a>
     <a href="#get-started" onclick="document.getElementById('mobileMenu').classList.remove('open')">Get Found</a>
   </div>
 
@@ -870,9 +923,9 @@
     <div class="container">
       <div class="hero-content">
         <h1>Helping <span class="highlight">your church</span> get found online.</h1>
-        <p class="hero-sub">Join <span class="stat-highlight">300,000+</span> churches struggling to be visible online. Get weekly tips that actually work.</p>
+        <p class="hero-sub">Make it easier for new people to find, trust, and take a next step with your church.</p>
         
-        <a href="https://churchlaunchpad.beehiiv.com/subscribe" class="cta-btn-large">Get Free Weekly Tips →</a>
+        <a href="#get-started" class="cta-btn-large">Request a Church Visibility Assessment →</a>
       </div>
     </div>
   </section>
@@ -1065,7 +1118,7 @@
           <h4>Resources</h4>
           <ul>
             <li><a href="/blog">Blog</a></li>
-            <li><a href="#get-started">Free Assessment</a></li>
+            <li><a href="#get-started">Visibility Assessment</a></li>
           </ul>
         </div>
         <div class="footer-col">
@@ -1075,17 +1128,67 @@
             <li><a href="/privacy">Privacy</a></li>
           </ul>
         </div>
+        <div class="footer-col footer-newsletter" id="newsletter">
+          <h4>Newsletter</h4>
+          <p class="newsletter-copy">Practical website and Google visibility notes for small churches.</p>
+          <form class="newsletter-form" id="newsletter-form">
+            <label class="newsletter-field" for="newsletter-website">Website</label>
+            <input class="newsletter-field" type="text" id="newsletter-website" name="website" tabindex="-1" autocomplete="off">
+            <label class="newsletter-field" for="newsletter-email">Email</label>
+            <input type="email" id="newsletter-email" name="email" placeholder="you@example.com" autocomplete="email" aria-describedby="newsletter-consent newsletter-message" required>
+            <button type="submit">Subscribe</button>
+            <p class="newsletter-privacy" id="newsletter-consent">Buttondown will email you a confirmation link. See our <a href="/privacy">privacy notice</a>.</p>
+            <p class="newsletter-message" id="newsletter-message" role="status" aria-live="polite"></p>
+          </form>
+        </div>
       </div>
       <div class="footer-bottom">
         <p>© 2025-2026 ChurchLaunchpad — All rights reserved</p>
-        <div class="footer-social">
-          <a href="#">𝕏</a>
-          <a href="#">f</a>
-        </div>
       </div>
     </div>
   </footer>
 
   <div class="bottom-bar"></div>
+
+  <script>
+    const newsletterForm = document.getElementById('newsletter-form');
+    if (newsletterForm) {
+      const emailInput = document.getElementById('newsletter-email');
+      const trapInput = document.getElementById('newsletter-website');
+      const message = document.getElementById('newsletter-message');
+      const button = newsletterForm.querySelector('button');
+
+      newsletterForm.addEventListener('submit', async (event) => {
+        event.preventDefault();
+        message.textContent = 'Subscribing...';
+        button.disabled = true;
+
+        try {
+          const response = await fetch('/api/subscribe', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+              email: emailInput.value,
+              website: trapInput.value,
+            }),
+          });
+          const result = await response.json().catch(() => ({}));
+
+          if (!response.ok || !result.ok) {
+            throw new Error(result.error || 'Signup failed');
+          }
+
+          newsletterForm.reset();
+          message.textContent = result.alreadySubscribed
+            ? 'You are already on the list.'
+            : 'Check your inbox to confirm.';
+        } catch {
+          message.textContent = 'Please try again or email hello@churchlaunchpad.org.';
+        } finally {
+          button.disabled = false;
+        }
+      });
+    }
+  </script>
 </body>
 </html>
