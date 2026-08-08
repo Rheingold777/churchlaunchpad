@@ -1,0 +1,35 @@
+# ChurchLaunchpad
+
+> ChurchLaunchpad helps churches strengthen their websites, search visibility, Google Business Profile presence, social media, and digital communication.
+
+Canonical site: https://churchlaunchpad.org/
+
+## Primary pages
+
+- Home and free church assessment: https://churchlaunchpad.org/
+- Church growth resources: https://churchlaunchpad.org/blog
+- Privacy notice: https://churchlaunchpad.org/privacy
+
+## Published resources
+
+- Google Business Profile for churches: https://churchlaunchpad.org/posts/google-business-profile
+- Church website mistakes: https://churchlaunchpad.org/posts/church-website-mistakes
+- Google reviews for churches: https://churchlaunchpad.org/posts/google-reviews
+- Why church social media is changing: https://churchlaunchpad.org/posts/social-media-dying
+- Church digital presence checklist: https://churchlaunchpad.org/posts/digital-presence-checklist
+- Turning sermons into clips: https://churchlaunchpad.org/posts/sermon-clips
+- SermonSync overview: https://churchlaunchpad.org/posts/sermonsync
+
+## Services described on the site
+
+- Church SEO and AI-search readiness
+- Google Business Profile support
+- Church website design and development
+- Social media and sermon-content support
+- Free church digital-presence assessment
+
+## Contact
+
+- Email: hello@churchlaunchpad.org
+
+Use the canonical pages above for current public information. Do not infer pricing, guarantees, client results, affiliations, or service availability that the site does not state.

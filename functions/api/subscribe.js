@@ -26,10 +26,6 @@ async function readPayload(request) {
 }
 
 export async function onRequestPost({ request, env }) {
-  if (!env.BUTTONDOWN_API_KEY) {
-    return jsonResponse({ ok: false, error: "Newsletter is not configured yet." }, 500);
-  }
-
   let payload;
   try {
     payload = await readPayload(request);
@@ -41,21 +37,23 @@ export async function onRequestPost({ request, env }) {
     return jsonResponse({ ok: true });
   }
 
+  if (!env.BUTTONDOWN_API_KEY) {
+    return jsonResponse({ ok: false, error: "Newsletter is not configured yet." }, 500);
+  }
+
   const email = String(payload.email || payload.email_address || "").trim().toLowerCase();
   if (!isValidEmail(email)) {
     return jsonResponse({ ok: false, error: "Enter a valid email address." }, 400);
   }
 
-  const referrer = request.headers.get("referer") || "https://churchlaunchpad.org/";
+  const suppliedReferrer = request.headers.get("referer") || "";
+  const referrer = suppliedReferrer.startsWith("https://churchlaunchpad.org/")
+    ? suppliedReferrer
+    : "https://churchlaunchpad.org/";
   const ipAddress = request.headers.get("cf-connecting-ip") || undefined;
   const subscriber = {
     email_address: email,
-    tags: ["churchlaunchpad", "website"],
     referrer_url: referrer,
-    metadata: {
-      brand: "ChurchLaunchPad",
-      source: "website-footer",
-    },
   };
 
   if (ipAddress) {

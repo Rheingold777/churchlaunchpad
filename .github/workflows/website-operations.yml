@@ -1,0 +1,69 @@
+name: Website Operations QA
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+  deployment_status:
+  workflow_dispatch:
+  schedule:
+    - cron: "17 8 * * 1"
+      timezone: "America/Chicago"
+
+permissions:
+  contents: read
+
+concurrency:
+  group: website-operations-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  source-contract:
+    if: github.event_name != 'deployment_status'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+      - name: Verify checker regression tests
+        run: |
+          python -B tools/test_sitecheck.py
+          python -B tools/test_prepare_netlify_deploy.py
+          python -B tools/test_verify_netlify_form_receipt.py
+          node --test tools/test_subscribe_function.mjs
+      - name: Verify source contract
+        run: python tools/sitecheck.py source --config website-ops.json --root . --report artifacts/source-report.json
+      - name: Preserve source evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: website-ops-source-${{ github.run_id }}
+          path: artifacts/source-report.json
+          if-no-files-found: error
+
+  production-contract:
+    if: >-
+      github.event_name == 'schedule' ||
+      github.event_name == 'workflow_dispatch' ||
+      (github.event_name == 'deployment_status' &&
+       github.event.deployment_status.state == 'success' &&
+       github.event.deployment.environment == 'production')
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Verify production contract
+        run: python tools/sitecheck.py live --config website-ops.json --report artifacts/production-report.json
+      - name: Preserve production evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: website-ops-production-${{ github.run_id }}
+          path: artifacts/production-report.json
+          if-no-files-found: error

@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your Church Doesn't Need More Posts | ChurchLaunchpad</title>
+  <meta name="description" content="A simple two-post rhythm builds more momentum than random bursts ever will.">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1521791136064-7986c2920216?w=1200&h=630&fit=crop">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,800;1,700&family=Lora:wght@400;500;600&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    :root {
+      --primary: #2563eb;
+      --text: #1f2937;
+      --text-light: #6b7280;
+      --bg: #faf8f5;
+    }
+    body {
+      font-family: 'Lora', Georgia, serif;
+      color: var(--text);
+      line-height: 1.8;
+      background: var(--bg);
+    }
+    .container { max-width: 720px; margin: 0 auto; padding: 0 24px; }
+
+    .top-bar {
+      height: 4px;
+      background: linear-gradient(90deg, #64748b 0%, #64748b 33%, var(--primary) 33%, var(--primary) 66%, #cbd5e1 66%, #cbd5e1 100%);
+    }
+
+    nav {
+      padding: 20px 0;
+      border-bottom: 2px solid #94a3b8;
+      background: var(--bg);
+    }
+    nav .container { display: flex; justify-content: space-between; align-items: center; max-width: 1320px; }
+    .logo {
+      font-family: 'Playfair Display', serif;
+      font-size: 22px;
+      font-weight: 700;
+      color: var(--text);
+      text-decoration: none;
+      border-bottom: 2px solid var(--primary);
+      padding-bottom: 2px;
+    }
+    .nav-links { display: flex; align-items: center; gap: 36px; }
+    .nav-link {
+      font-family: 'Playfair Display', serif;
+      color: var(--text);
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 22px;
+    }
+
+    article { padding: 60px 0; }
+
+    .post-meta {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      margin-bottom: 24px;
+    }
+    .post-tag {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 11px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      background: var(--primary);
+      color: white;
+      padding: 6px 12px;
+      border-radius: 4px;
+    }
+    .post-date {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 13px;
+      color: var(--text-light);
+    }
+
+    h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 42px;
+      font-weight: 800;
+      line-height: 1.2;
+      margin-bottom: 16px;
+    }
+
+    .post-subtitle {
+      font-size: 20px;
+      color: var(--text-light);
+      margin-bottom: 32px;
+    }
+
+    .post-hero {
+      width: 100%;
+      height: 400px;
+      object-fit: cover;
+      border-radius: 12px;
+      margin-bottom: 40px;
+    }
+
+    .post-content p {
+      font-size: 18px;
+      margin-bottom: 24px;
+    }
+
+    .post-content h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 28px;
+      font-weight: 700;
+      margin: 40px 0 20px;
+    }
+
+    .post-content a {
+      color: var(--primary);
+    }
+
+    .post-content ul, .post-content ol {
+      margin: 0 0 24px 24px;
+    }
+
+    .post-content li {
+      margin-bottom: 8px;
+    }
+
+    .tip-box {
+      background: #f8fafc;
+      border-radius: 12px;
+      padding: 28px;
+      margin: 32px 0;
+    }
+
+    .tip-box p { margin-bottom: 0; }
+
+    .cta-section {
+      background: #1e293b;
+      border-radius: 12px;
+      padding: 40px;
+      margin: 48px 0;
+      text-align: center;
+    }
+
+    .cta-section h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 24px;
+      color: white;
+      margin-bottom: 16px;
+    }
+
+    .cta-section p {
+      color: #94a3b8;
+      margin-bottom: 24px;
+    }
+
+    .cta-btn {
+      display: inline-block;
+      background: var(--primary);
+      color: white;
+      padding: 14px 28px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .back-link {
+      display: inline-block;
+      color: var(--primary);
+      text-decoration: none;
+      margin-bottom: 32px;
+      font-weight: 600;
+    }
+
+    .back-link:hover { text-decoration: underline; }
+
+    @media (max-width: 600px) {
+      h1 { font-size: 32px; }
+      .post-hero { height: 250px; }
+      nav .container { flex-wrap: wrap; justify-content: center; gap: 12px; }
+      .logo { font-size: 20px; }
+      .nav-links { gap: 20px; }
+      .nav-link { font-size: 16px; }
+    }
+  </style>
+  <link rel="canonical" href="https://churchlaunchpad.org/posts/2026-04-21-two-post-rhythm">
+</head>
+<body>
+  <div class="top-bar"></div>
+
+  <nav>
+    <div class="container">
+      <a href="/" class="logo">ChurchLaunchpad</a>
+      <div class="nav-links">
+        <a href="/blog" class="nav-link">Resources</a>
+        <a href="/#get-started" class="nav-link">Get Started</a>
+      </div>
+    </div>
+  </nav>
+
+  <article>
+    <div class="container">
+      <a href="/blog" class="back-link">← Back to Resources</a>
+
+      <div class="post-meta">
+        <span class="post-tag">Google</span>
+        <span class="post-date">April 21, 2026</span>
+      </div>
+
+      <h1>Your Church Doesn't Need More Posts</h1>
+      <p class="post-subtitle">A simple two-post rhythm builds more momentum than random bursts ever will.</p>
+
+      <img src="https://images.unsplash.com/photo-1521791136064-7986c2920216?w=1200&h=630&fit=crop" alt="Your Church Doesn't Need More Posts" class="post-hero">
+
+      <div class="post-content">
+        <p>Most small churches treat social media like a revival meeting, intense for a week, then silent for a month. That inconsistency trains people to ignore your page, and it makes your church look less active than it really is.</p><p>The win is not more content. The win is a repeatable rhythm your team can actually sustain. Two predictable posts every week will outperform a dozen scattered posts followed by radio silence.</p><div class="tip-box"><p><strong>This week:</strong> Pick two fixed slots now: Monday for one photo from Sunday with a one-sentence takeaway, and Friday for one upcoming event, sermon teaser, or Scripture graphic. Put both reminders on the calendar, assign one person to post, and keep the format the same for the next 30 days.</p></div><p>Next week: the homepage mistake that makes first-time visitors bounce in five seconds.</p>
+      </div>
+
+      <div class="cta-section">
+        <h3>Want more tips like this?</h3>
+        <p>Join The Launchpad — one tip every two weeks to help your church get found online.</p>
+        <a href="/#newsletter" class="cta-btn">Subscribe Free →</a>
+      </div>
+    </div>
+  </article>
+    <p class="footer-legal"><a href="/privacy">Privacy</a></p>
+</body>
+</html>
