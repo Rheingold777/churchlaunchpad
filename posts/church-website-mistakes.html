@@ -70,6 +70,29 @@
     .bottom-bar { height: 4px; background: linear-gradient(90deg, #64748b 0%, #64748b 33%, var(--primary) 33%, var(--primary) 66%, #cbd5e1 66%, #cbd5e1 100%); }
     @media (max-width: 768px) { h1 { font-family: 'Playfair Display', serif; font-size: 32px; } .featured-image { height: 250px; } .footer-content { grid-template-columns: 1fr 1fr; } .footer-brand { grid-column: span 2; } }
   </style>
+<!-- Google Analytics 4 (G-2WXGECBKCP): fires only on the live domain, not on previews/localhost -->
+<script>
+(function () {
+  var LIVE = ['churchlaunchpad.org','www.churchlaunchpad.org'];
+  window.dataLayer = window.dataLayer || [];
+  window.gtag = function () { dataLayer.push(arguments); };
+  if (LIVE.indexOf(location.hostname) === -1) return;
+  var s = document.createElement('script');
+  s.async = true;
+  s.src = 'https://www.googletagmanager.com/gtag/js?id=G-2WXGECBKCP';
+  document.head.appendChild(s);
+  gtag('js', new Date());
+  gtag('config', 'G-2WXGECBKCP');
+  document.addEventListener('click', function (e) {
+    var a = e.target.closest && e.target.closest('a[href]');
+    if (!a) return;
+    var href = a.getAttribute('href') || '';
+    if (href.indexOf('tel:') === 0) gtag('event', 'call_click', { link_url: href });
+    else if (href.indexOf('sms:') === 0) gtag('event', 'text_click', { link_url: href });
+    else if (href.indexOf('mailto:') === 0) gtag('event', 'email_click', { link_url: href });
+  });
+})();
+</script>
 </head>
 <body>
   <div class="top-bar"></div>

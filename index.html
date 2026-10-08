@@ -27,15 +27,6 @@
   <meta name="twitter:description" content="Professional websites, social media, and digital strategy for churches. Get your church online. No tech skills needed.">
   <meta name="twitter:image" content="https://churchlaunchpad.org/images/og-image.svg">
   
-  <!-- Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-6QQPDMK9RN"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-6QQPDMK9RN');
-  </script>
-  
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,800;1,700&family=Lora:wght@400;500;600&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
   
@@ -878,6 +869,29 @@
       .founder-text p { font-size: 14px; }
     }
   </style>
+<!-- Google Analytics 4 (G-2WXGECBKCP): fires only on the live domain, not on previews/localhost -->
+<script>
+(function () {
+  var LIVE = ['churchlaunchpad.org','www.churchlaunchpad.org'];
+  window.dataLayer = window.dataLayer || [];
+  window.gtag = function () { dataLayer.push(arguments); };
+  if (LIVE.indexOf(location.hostname) === -1) return;
+  var s = document.createElement('script');
+  s.async = true;
+  s.src = 'https://www.googletagmanager.com/gtag/js?id=G-2WXGECBKCP';
+  document.head.appendChild(s);
+  gtag('js', new Date());
+  gtag('config', 'G-2WXGECBKCP');
+  document.addEventListener('click', function (e) {
+    var a = e.target.closest && e.target.closest('a[href]');
+    if (!a) return;
+    var href = a.getAttribute('href') || '';
+    if (href.indexOf('tel:') === 0) gtag('event', 'call_click', { link_url: href });
+    else if (href.indexOf('sms:') === 0) gtag('event', 'text_click', { link_url: href });
+    else if (href.indexOf('mailto:') === 0) gtag('event', 'email_click', { link_url: href });
+  });
+})();
+</script>
 </head>
 <body>
 
